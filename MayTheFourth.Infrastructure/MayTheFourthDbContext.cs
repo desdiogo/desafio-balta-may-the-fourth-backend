@@ -6,6 +6,7 @@ namespace MayTheFourth.Infrastructure;
 public class MayTheFourthDbContext: DbContext
 {
     public DbSet<Movie> Movies { get; set; }
+    public DbSet<Planet> Planets { get; set; }
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
