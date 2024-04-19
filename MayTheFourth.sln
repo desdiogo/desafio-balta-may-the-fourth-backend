@@ -1,8 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MayTheFourth.Infrastructure", "MayTheFourth.Infrastructure\MayTheFourth.Infrastructure.csproj", "{CC90B450-35EA-4DD6-A5E4-9BD4F4B95B27}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC90B450-35EA-4DD6-A5E4-9BD4F4B95B27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC90B450-35EA-4DD6-A5E4-9BD4F4B95B27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC90B450-35EA-4DD6-A5E4-9BD4F4B95B27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC90B450-35EA-4DD6-A5E4-9BD4F4B95B27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
