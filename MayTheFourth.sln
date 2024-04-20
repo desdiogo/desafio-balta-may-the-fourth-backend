@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MayTheFourth.Api", "MayTheF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MayTheFourth.Communication", "MayTheFourth.Communication\MayTheFourth.Communication.csproj", "{6180BDBD-619C-4302-834D-7572B3CE84CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MayTheFourth.Application", "MayTheFourth.Application\MayTheFourth.Application.csproj", "{E911D50C-CACA-4297-9A62-1C5AEFD1AEA4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{6180BDBD-619C-4302-834D-7572B3CE84CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6180BDBD-619C-4302-834D-7572B3CE84CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6180BDBD-619C-4302-834D-7572B3CE84CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E911D50C-CACA-4297-9A62-1C5AEFD1AEA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E911D50C-CACA-4297-9A62-1C5AEFD1AEA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E911D50C-CACA-4297-9A62-1C5AEFD1AEA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E911D50C-CACA-4297-9A62-1C5AEFD1AEA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
