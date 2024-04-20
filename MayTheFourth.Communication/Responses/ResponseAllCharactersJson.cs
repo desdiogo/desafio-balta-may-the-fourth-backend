@@ -10,6 +10,6 @@ public class ResponseAllCharactersJson
     public string EyeColor { get; set; } = string.Empty;
     public string BirthYear { get; set; } = string.Empty;
     public string Gender { get; set; } = string.Empty;
-    public ResponseGenericJson Planet  { get; set; }
+    public ResponseSimplifiedJson Planet  { get; set; }
     public IEnumerable<ResponseMovieJson> Movies { get; set; } = [];
 }

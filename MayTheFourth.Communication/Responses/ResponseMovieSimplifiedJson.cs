@@ -1,7 +1,7 @@
 ﻿namespace MayTheFourth.Communication.Responses;
 
-public class ResponseGenericJson
+public class ResponseMovieSimplifiedJson
 {
     public ushort Id { get; set; }
-    public string Name { get; set; } = string.Empty;
+    public string Title { get; set; }
 }

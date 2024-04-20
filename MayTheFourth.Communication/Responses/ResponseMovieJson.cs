@@ -2,6 +2,14 @@
 
 public class ResponseMovieJson
 {
-    public ushort Id { get; set; }
     public string Title { get; set; } = string.Empty;
+    public ushort Episode { get; set; }
+    public string OpeningCrawl { get; set; } = string.Empty;
+    public string Director { get; set; } = string.Empty;
+    public string Producer { get; set; } = string.Empty;
+    public DateTime ReleaseDate { get; set; }
+    public IEnumerable<ResponseAllCharactersJson> Characters { get; set; } = [];
+    public IEnumerable<ResponseAllPlanetsJson> Planets { get; set; } = [];
+    public IEnumerable<ResponseVehicleSimplifiedJson> Vehicles { get; set; } = [];
+    public IEnumerable<ResponseStarshpSimplifiedJson> Starships { get; set; } = [];
 }

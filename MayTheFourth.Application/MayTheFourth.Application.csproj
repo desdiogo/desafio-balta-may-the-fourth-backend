@@ -6,4 +6,9 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\MayTheFourth.Communication\MayTheFourth.Communication.csproj" />
+      <ProjectReference Include="..\MayTheFourth.Infrastructure\MayTheFourth.Infrastructure.csproj" />
+    </ItemGroup>
+
 </Project>
