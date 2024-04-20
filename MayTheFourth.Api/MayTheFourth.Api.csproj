@@ -14,6 +14,7 @@
     <ItemGroup>
       <ProjectReference Include="..\MayTheFourth.Application\MayTheFourth.Application.csproj" />
       <ProjectReference Include="..\MayTheFourth.Communication\MayTheFourth.Communication.csproj" />
+      <ProjectReference Include="..\MayTheFourth.Exceptions\MayTheFourth.Exceptions.csproj" />
     </ItemGroup>
 
 </Project>
