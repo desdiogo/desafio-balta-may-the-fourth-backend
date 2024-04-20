@@ -4,7 +4,7 @@ public class Vehicle
 {
     public ushort Id { get; set; }
     public string Name { get; set; } = string.Empty;
-    public string Model { get; set; }
+    public string Model { get; set; } = string.Empty;
     public string Manufacturer { get; set; } = string.Empty;
     public string CostInCredits { get; set; } = string.Empty;
     public string Length { get; set; } = string.Empty;

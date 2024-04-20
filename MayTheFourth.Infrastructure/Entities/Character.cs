@@ -4,7 +4,7 @@ public class Character
 {
     public ushort Id { get; set; }
     public string Name { get; set; } = string.Empty;
-    public string Height { get; set; }
+    public string Height { get; set; } = string.Empty;
     public string Weight { get; set; } = string.Empty;
     public string HairColor { get; set; } = string.Empty;
     public string SkinColor { get; set; } = string.Empty;
