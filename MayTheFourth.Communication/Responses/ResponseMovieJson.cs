@@ -8,8 +8,8 @@ public class ResponseMovieJson
     public string Director { get; set; } = string.Empty;
     public string Producer { get; set; } = string.Empty;
     public DateTime ReleaseDate { get; set; }
-    public IEnumerable<ResponseAllCharactersJson> Characters { get; set; } = [];
-    public IEnumerable<ResponseAllPlanetsJson> Planets { get; set; } = [];
+    public IEnumerable<ResponseCharacterSimplifiedJson> Characters { get; set; } = [];
+    public IEnumerable<ResponsePlanetSimplifiedJson> Planets { get; set; } = [];
     public IEnumerable<ResponseVehicleSimplifiedJson> Vehicles { get; set; } = [];
     public IEnumerable<ResponseStarshpSimplifiedJson> Starships { get; set; } = [];
 }
