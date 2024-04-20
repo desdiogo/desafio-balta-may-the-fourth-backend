@@ -16,4 +16,5 @@ public class Starship
     public string Mglt { get; set; } = string.Empty;
     public string Consumables { get; set; } = string.Empty;
     public string Class { get; set; } = string.Empty;
+    public IEnumerable<Movie> Movies { get; } = [];
 }

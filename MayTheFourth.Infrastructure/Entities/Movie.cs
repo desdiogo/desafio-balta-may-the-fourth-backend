@@ -12,4 +12,5 @@ public class Movie
     public IEnumerable<Character> Characters { get; } = [];
     public IEnumerable<Planet> Planets { get; } = [];
     public IEnumerable<Vehicle> Vehicles { get; } = [];
+    public IEnumerable<Starship> Starships { get; } = [];
 }

@@ -16,8 +16,11 @@ public class MovieController : ControllerBase
             .Select(movie =>
                 new
                 {
+                    Id = movie.Id,
                     Characters = movie.Characters.Select(character => new { Name = character.Name }),
-                    Planets = movie.Planets.Select(planet => new { Name = planet.Name })
+                    Planets = movie.Planets.Select(planet => new { Name = planet.Name }),
+                    Vehicles = movie.Vehicles.Select(planet => new { Name = planet.Name }),
+                    Starships = movie.Starships.Select(planet => new { Name = planet.Name })
                 }).ToList();
 
         return Ok(response);

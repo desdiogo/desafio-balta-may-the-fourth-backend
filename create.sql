@@ -818,191 +818,114 @@ CREATE TABLE "Starships"
     "Class"            VARCHAR(50)
 );
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('CR90 corvette', 'CR90 corvette', 'Corellian Engineering Corporation', '3500000', '150', '950', '30-165', '600',
-        '3000000', '2.0', '60', '1 year', 'corvette');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (2 ,'CR90 corvette', 'CR90 corvette', 'Corellian Engineering Corporation', '3500000', '150', '950', '30-165', '600', '3000000', '2.0', '60', '1 year', 'corvette');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Star Destroyer', 'Imperial I-class Star Destroyer', 'Kuat Drive Yards', '150000000', '1,600', '975', '47,060',
-        'n/a', '36000000', '2.0', '60', '2 years', 'Star Destroyer');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (3 ,'Star Destroyer', 'Imperial I-class Star Destroyer', 'Kuat Drive Yards', '150000000', '1,600', '975', '47,060', 'n/a', '36000000', '2.0', '60', '2 years', 'Star Destroyer');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Sentinel-class landing craft', 'Sentinel-class landing craft', 'Sienar Fleet Systems, Cyngus Spaceworks',
-        '240000', '38', '1000', '5', '75', '180000', '1.0', '70', '1 month', 'landing craft');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (5 ,'Sentinel-class landing craft', 'Sentinel-class landing craft', 'Sienar Fleet Systems, Cyngus Spaceworks', '240000', '38', '1000', '5', '75', '180000', '1.0', '70', '1 month', 'landing craft');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Death Star', 'DS-1 Orbital Battle Station', 'Imperial Department of Military Research, Sienar Fleet Systems',
-        '1000000000000', '120000', 'n/a', '342,953', '843,342', '1000000000000', '4.0', '10', '3 years',
-        'Deep Space Mobile Battlestation');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (9 ,'Death Star', 'DS-1 Orbital Battle Station', 'Imperial Department of Military Research, Sienar Fleet Systems', '1000000000000', '120000', 'n/a', '342,953', '843,342', '1000000000000', '4.0', '10', '3 years', 'Deep Space Mobile Battlestation');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Millennium Falcon', 'YT-1300 light freighter', 'Corellian Engineering Corporation', '100000', '34.37', '1050',
-        '4', '6', '100000', '0.5', '75', '2 months', 'Light freighter');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (10 ,'Millennium Falcon', 'YT-1300 light freighter', 'Corellian Engineering Corporation', '100000', '34.37', '1050', '4', '6', '100000', '0.5', '75', '2 months', 'Light freighter');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Y-wing', 'BTL Y-wing', 'Koensayr Manufacturing', '134999', '14', '1000km', '2', '0', '110', '1.0', '80',
-        '1 week', 'assault starfighter');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (11 ,'Y-wing', 'BTL Y-wing', 'Koensayr Manufacturing', '134999', '14', '1000km', '2', '0', '110', '1.0', '80', '1 week', 'assault starfighter');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('X-wing', 'T-65 X-wing', 'Incom Corporation', '149999', '12.5', '1050', '1', '0', '110', '1.0', '100', '1 week',
-        'Starfighter');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (12 ,'X-wing', 'T-65 X-wing', 'Incom Corporation', '149999', '12.5', '1050', '1', '0', '110', '1.0', '100', '1 week', 'Starfighter');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('TIE Advanced x1', 'Twin Ion Engine Advanced x1', 'Sienar Fleet Systems', 'unknown', '9.2', '1200', '1', '0',
-        '150', '1.0', '105', '5 days', 'Starfighter');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (13 ,'TIE Advanced x1', 'Twin Ion Engine Advanced x1', 'Sienar Fleet Systems', 'unknown', '9.2', '1200', '1', '0', '150', '1.0', '105', '5 days', 'Starfighter');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Executor', 'Executor-class star dreadnought', 'Kuat Drive Yards, Fondor Shipyards', '1143350000', '19000',
-        'n/a', '279,144', '38000', '250000000', '2.0', '40', '6 years', 'Star dreadnought');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (15 ,'Executor', 'Executor-class star dreadnought', 'Kuat Drive Yards, Fondor Shipyards', '1143350000', '19000', 'n/a', '279,144', '38000', '250000000', '2.0', '40', '6 years', 'Star dreadnought');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Rebel transport', 'GR-75 medium transport', 'Gallofree Yards, Inc.', 'unknown', '90', '650', '6', '90',
-        '19000000', '4.0', '20', '6 months', 'Medium transport');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (17 ,'Rebel transport', 'GR-75 medium transport', 'Gallofree Yards, Inc.', 'unknown', '90', '650', '6', '90', '19000000', '4.0', '20', '6 months', 'Medium transport');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Slave 1', 'Firespray-31-class patrol and attack', 'Kuat Systems Engineering', 'unknown', '21.5', '1000', '1',
-        '6', '70000', '3.0', '70', '1 month', 'Patrol craft');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (21 ,'Slave 1', 'Firespray-31-class patrol and attack', 'Kuat Systems Engineering', 'unknown', '21.5', '1000', '1', '6', '70000', '3.0', '70', '1 month', 'Patrol craft');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Imperial shuttle', 'Lambda-class T-4a shuttle', 'Sienar Fleet Systems', '240000', '20', '850', '6', '20',
-        '80000', '1.0', '50', '2 months', 'Armed government transport');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (22 ,'Imperial shuttle', 'Lambda-class T-4a shuttle', 'Sienar Fleet Systems', '240000', '20', '850', '6', '20', '80000', '1.0', '50', '2 months', 'Armed government transport');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('EF76 Nebulon-B escort frigate', 'EF76 Nebulon-B escort frigate', 'Kuat Drive Yards', '8500000', '300', '800',
-        '854', '75', '6000000', '2.0', '40', '2 years', 'Escort ship');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (23 ,'EF76 Nebulon-B escort frigate', 'EF76 Nebulon-B escort frigate', 'Kuat Drive Yards', '8500000', '300', '800', '854', '75', '6000000', '2.0', '40', '2 years', 'Escort ship');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Calamari Cruiser', 'MC80 Liberty type Star Cruiser', 'Mon Calamari shipyards', '104000000', '1200', 'n/a',
-        '5400', '1200', 'unknown', '1.0', '60', '2 years', 'Star Cruiser');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (27 ,'Calamari Cruiser', 'MC80 Liberty type Star Cruiser', 'Mon Calamari shipyards', '104000000', '1200', 'n/a', '5400', '1200', 'unknown', '1.0', '60', '2 years', 'Star Cruiser');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('A-wing', 'RZ-1 A-wing Interceptor', 'Alliance Underground Engineering, Incom Corporation', '175000', '9.6',
-        '1300', '1', '0', '40', '1.0', '120', '1 week', 'Starfighter');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (28 ,'A-wing', 'RZ-1 A-wing Interceptor', 'Alliance Underground Engineering, Incom Corporation', '175000', '9.6', '1300', '1', '0', '40', '1.0', '120', '1 week', 'Starfighter');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('B-wing', 'A/SF-01 B-wing starfighter', 'Slayn & Korpil', '220000', '16.9', '950', '1', '0', '45', '2.0', '91',
-        '1 week', 'Assault Starfighter');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (29 ,'B-wing', 'A/SF-01 B-wing starfighter', 'Slayn & Korpil', '220000', '16.9', '950', '1', '0', '45', '2.0', '91', '1 week', 'Assault Starfighter');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Republic Cruiser', 'Consular-class cruiser', 'Corellian Engineering Corporation', 'unknown', '115', '900', '9',
-        '16', 'unknown', '2.0', 'unknown', 'unknown', 'Space cruiser');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (31 ,'Republic Cruiser', 'Consular-class cruiser', 'Corellian Engineering Corporation', 'unknown', '115', '900', '9', '16', 'unknown', '2.0', 'unknown', 'unknown', 'Space cruiser');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Droid control ship', 'Lucrehulk-class Droid Control Ship', 'Hoersch-Kessel Drive, Inc.', 'unknown', '3170',
-        'n/a', '175', '139000', '4000000000', '2.0', 'unknown', '500 days', 'Droid control ship');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (32 ,'Droid control ship', 'Lucrehulk-class Droid Control Ship', 'Hoersch-Kessel Drive, Inc.', 'unknown', '3170', 'n/a', '175', '139000', '4000000000', '2.0', 'unknown', '500 days', 'Droid control ship');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Naboo fighter', 'N-1 starfighter', 'Theed Palace Space Vessel Engineering Corps', '200000', '11', '1100', '1',
-        '0', '65', '1.0', 'unknown', '7 days', 'Starfighter');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (39 ,'Naboo fighter', 'N-1 starfighter', 'Theed Palace Space Vessel Engineering Corps', '200000', '11', '1100', '1', '0', '65', '1.0', 'unknown', '7 days', 'Starfighter');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Naboo Royal Starship', 'J-type 327 Nubian royal starship',
-        'Theed Palace Space Vessel Engineering Corps, Nubia Star Drives', 'unknown', '76', '920', '8', 'unknown',
-        'unknown', '1.8', 'unknown', 'unknown', 'yacht');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (40 ,'Naboo Royal Starship', 'J-type 327 Nubian royal starship', 'Theed Palace Space Vessel Engineering Corps, Nubia Star Drives', 'unknown', '76', '920', '8', 'unknown', 'unknown', '1.8', 'unknown', 'unknown', 'yacht');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Scimitar', 'Star Courier', 'Republic Sienar Systems', '55000000', '26.5', '1180', '1', '6', '2500000', '1.5',
-        'unknown', '30 days', 'Space Transport');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (41 ,'Scimitar', 'Star Courier', 'Republic Sienar Systems', '55000000', '26.5', '1180', '1', '6', '2500000', '1.5', 'unknown', '30 days', 'Space Transport');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('J-type diplomatic barge', 'J-type diplomatic barge',
-        'Theed Palace Space Vessel Engineering Corps, Nubia Star Drives', '2000000', '39', '2000', '5', '10', 'unknown',
-        '0.7', 'unknown', '1 year', 'Diplomatic barge');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (43 ,'J-type diplomatic barge', 'J-type diplomatic barge', 'Theed Palace Space Vessel Engineering Corps, Nubia Star Drives', '2000000', '39', '2000', '5', '10', 'unknown', '0.7', 'unknown', '1 year', 'Diplomatic barge');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('AA-9 Coruscant freighter', 'Botajef AA-9 Freighter-Liner', 'Botajef Shipyards', 'unknown', '390', 'unknown',
-        'unknown', '30000', 'unknown', 'unknown', 'unknown', 'unknown', 'freighter');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (47 ,'AA-9 Coruscant freighter', 'Botajef AA-9 Freighter-Liner', 'Botajef Shipyards', 'unknown', '390', 'unknown', 'unknown', '30000', 'unknown', 'unknown', 'unknown', 'unknown', 'freighter');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Jedi starfighter', 'Delta-7 Aethersprite-class interceptor', 'Kuat Systems Engineering', '180000', '8', '1150',
-        '1', '0', '60', '1.0', 'unknown', '7 days', 'Starfighter');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (48 ,'Jedi starfighter', 'Delta-7 Aethersprite-class interceptor', 'Kuat Systems Engineering', '180000', '8', '1150', '1', '0', '60', '1.0', 'unknown', '7 days', 'Starfighter');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('H-type Nubian yacht', 'H-type Nubian yacht', 'Theed Palace Space Vessel Engineering Corps', 'unknown', '47.9',
-        '8000', '4', 'unknown', 'unknown', '0.9', 'unknown', 'unknown', 'yacht');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (49 ,'H-type Nubian yacht', 'H-type Nubian yacht', 'Theed Palace Space Vessel Engineering Corps', 'unknown', '47.9', '8000', '4', 'unknown', 'unknown', '0.9', 'unknown', 'unknown', 'yacht');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Republic Assault ship', 'Acclamator I-class assault ship', 'Rothana Heavy Engineering', 'unknown', '752',
-        'unknown', '700', '16000', '11250000', '0.6', 'unknown', '2 years', 'assault ship');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (52 ,'Republic Assault ship', 'Acclamator I-class assault ship', 'Rothana Heavy Engineering', 'unknown', '752', 'unknown', '700', '16000', '11250000', '0.6', 'unknown', '2 years', 'assault ship');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Solar Sailer', 'Punworcca 116-class interstellar sloop', 'Huppla Pasa Tisc Shipwrights Collective', '35700',
-        '15.2', '1600', '3', '11', '240', '1.5', 'unknown', '7 days', 'yacht');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (58 ,'Solar Sailer', 'Punworcca 116-class interstellar sloop', 'Huppla Pasa Tisc Shipwrights Collective', '35700', '15.2', '1600', '3', '11', '240', '1.5', 'unknown', '7 days', 'yacht');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Trade Federation cruiser', 'Providence-class carrier/destroyer',
-        'Rendili StarDrive, Free Dac Volunteers Engineering corps.', '125000000', '1088', '1050', '600', '48247',
-        '50000000', '1.5', 'unknown', '4 years', 'capital ship');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (59 ,'Trade Federation cruiser', 'Providence-class carrier/destroyer', 'Rendili StarDrive, Free Dac Volunteers Engineering corps.', '125000000', '1088', '1050', '600', '48247', '50000000', '1.5', 'unknown', '4 years', 'capital ship');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Theta-class T-2c shuttle', 'Theta-class T-2c shuttle', 'Cygnus Spaceworks', '1000000', '18.5', '2000', '5',
-        '16', '50000', '1.0', 'unknown', '56 days', 'transport');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (61 ,'Theta-class T-2c shuttle', 'Theta-class T-2c shuttle', 'Cygnus Spaceworks', '1000000', '18.5', '2000', '5', '16', '50000', '1.0', 'unknown', '56 days', 'transport');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Republic attack cruiser', 'Senator-class Star Destroyer', 'Kuat Drive Yards, Allanteen Six shipyards',
-        '59000000', '1137', '975', '7400', '2000', '20000000', '1.0', 'unknown', '2 years', 'star destroyer');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (63 ,'Republic attack cruiser', 'Senator-class Star Destroyer', 'Kuat Drive Yards, Allanteen Six shipyards', '59000000', '1137', '975', '7400', '2000', '20000000', '1.0', 'unknown', '2 years', 'star destroyer');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Naboo star skiff', 'J-type star skiff',
-        'Theed Palace Space Vessel Engineering Corps/Nubia Star Drives, Incorporated', 'unknown', '29.2', '1050', '3',
-        '3', 'unknown', '0.5', 'unknown', 'unknown', 'yacht');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (64 ,'Naboo star skiff', 'J-type star skiff', 'Theed Palace Space Vessel Engineering Corps/Nubia Star Drives, Incorporated', 'unknown', '29.2', '1050', '3', '3', 'unknown', '0.5', 'unknown', 'unknown', 'yacht');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Jedi Interceptor', 'Eta-2 Actis-class light interceptor', 'Kuat Systems Engineering', '320000', '5.47', '1500',
-        '1', '0', '60', '1.0', 'unknown', '2 days', 'starfighter');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (65 ,'Jedi Interceptor', 'Eta-2 Actis-class light interceptor', 'Kuat Systems Engineering', '320000', '5.47', '1500', '1', '0', '60', '1.0', 'unknown', '2 days', 'starfighter');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('arc-170', 'Aggressive Reconnaissance-170 starfighte', 'Incom Corporation, Subpro Corporation', '155000',
-        '14.5', '1000', '3', '0', '110', '1.0', '100', '5 days', 'starfighter');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (66 ,'arc-170', 'Aggressive Reconnaissance-170 starfighte', 'Incom Corporation, Subpro Corporation', '155000', '14.5', '1000', '3', '0', '110', '1.0', '100', '5 days', 'starfighter');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Banking clan frigte', 'Munificent-class star frigate',
-        'Hoersch-Kessel Drive, Inc, Gwori Revolutionary Industries', '57000000', '825', 'unknown', '200', 'unknown',
-        '40000000', '1.0', 'unknown', '2 years', 'cruiser');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (68 ,'Banking clan frigte', 'Munificent-class star frigate', 'Hoersch-Kessel Drive, Inc, Gwori Revolutionary Industries', '57000000', '825', 'unknown', '200', 'unknown', '40000000', '1.0', 'unknown', '2 years', 'cruiser');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('Belbullab-22 starfighter', 'Belbullab-22 starfighter', 'Feethan Ottraw Scalable Assemblies', '168000', '6.71',
-        '1100', '1', '0', '140', '6', 'unknown', '7 days', 'starfighter');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (74 ,'Belbullab-22 starfighter', 'Belbullab-22 starfighter', 'Feethan Ottraw Scalable Assemblies', '168000', '6.71', '1100', '1', '0', '140', '6', 'unknown', '7 days', 'starfighter');
 
-INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
-                         "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
-VALUES ('V-wing', 'Alpha-3 Nimbus-class V-wing starfighter', 'Kuat Systems Engineering', '102500', '7.9', '1050', '1',
-        '0', '60', '1.0', 'unknown', '15 hours', 'starfighter');
+INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES (75 ,'V-wing', 'Alpha-3 Nimbus-class V-wing starfighter', 'Kuat Systems Engineering', '102500', '7.9', '1050', '1', '0', '60', '1.0', 'unknown', '15 hours', 'starfighter');
+
 
 CREATE TABLE "CharacterMovie"
 (
@@ -1754,6 +1677,178 @@ VALUES (6, 73);
 
 INSERT INTO "MovieVehicle" ("MoviesId", "VehiclesId")
 VALUES (6, 76);
+
+CREATE TABLE "MovieStarship"
+(
+    "MoviesId"   SMALLINT REFERENCES "Movies" ("Id"),
+    "StarshipsId" SMALLINT REFERENCES "Starships" ("Id")
+);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (1, 2);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (1, 3);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (1, 5);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (1, 9);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (1, 10);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (1, 11);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (1, 12);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (1, 13);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (2, 3);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (2, 10);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (2, 11);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (2, 12);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (2, 15);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (2, 17);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (2, 21);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (2, 22);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (2, 23);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (3, 2);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (3, 3);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (3, 10);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (3, 11);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (3, 12);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (3, 15);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (3, 17);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (3, 22);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (3, 23);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (3, 27);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (3, 28);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (3, 29);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (4, 31);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (4, 32);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (4, 39);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (4, 40);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (4, 41);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (5, 21);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (5, 32);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (5, 39);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (5, 43);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (5, 47);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (5, 48);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (5, 49);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (5, 52);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (5, 58);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (6, 2);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (6, 32);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (6, 48);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (6, 59);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (6, 61);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (6, 63);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (6, 64);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (6, 65);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (6, 66);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (6, 68);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (6, 74);
+
+INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
+VALUES (6, 75);
+
 
 
 
