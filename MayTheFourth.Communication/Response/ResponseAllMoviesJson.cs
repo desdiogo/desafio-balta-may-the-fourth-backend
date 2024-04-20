@@ -1,6 +1,4 @@
-﻿using MayTheFourth.Infrastructure.Entities;
-
-namespace MayTheFourth.Communication.Response;
+﻿namespace MayTheFourth.Communication.Response;
 
 public class ResponseAllMoviesJson
 {

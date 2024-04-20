@@ -11,13 +11,13 @@ namespace MayTheFourth.Api.Controllers;
 public class CharacterController : ControllerBase
 {
     [HttpGet]
-    [ProducesResponseType(typeof(List<ResponseAllCharacterJson>), StatusCodes.Status200OK)]
-    public IActionResult ListAllMovies()
+    [ProducesResponseType(typeof(List<ResponseAllCharactersJson>), StatusCodes.Status200OK)]
+    public IActionResult ListAllCharacters()
     {
         var dbContext = new MayTheFourthDbContext();
         var response = dbContext.Characters
             .Select(character =>
-                new ResponseAllCharacterJson()
+                new ResponseAllCharactersJson()
                 {
                     Name = character.Name,
                     Height = character.Height,

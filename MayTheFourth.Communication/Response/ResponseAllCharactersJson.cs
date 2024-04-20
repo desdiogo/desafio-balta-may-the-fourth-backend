@@ -1,8 +1,6 @@
-﻿using MayTheFourth.Infrastructure.Entities;
+﻿namespace MayTheFourth.Communication.Response;
 
-namespace MayTheFourth.Communication.Response;
-
-public class ResponseAllCharacterJson
+public class ResponseAllCharactersJson
 {
     public string Name { get; set; } = string.Empty;
     public string Height { get; set; }
