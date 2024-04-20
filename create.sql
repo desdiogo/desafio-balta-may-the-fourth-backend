@@ -60,184 +60,265 @@ CREATE TABLE "Planets"
     "Population"     VARCHAR(255)
 );
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Tatooine', '23', '304', '10465', 'arid', '1 standard', 'desert', '1', '200000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Alderaan', '24', '364', '12500', 'temperate', '1 standard', 'grasslands, mountains', '40', '2000000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Yavin IV', '24', '4818', '10200', 'temperate, tropical', '1 standard', 'jungle, rainforests', '8', '1000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Hoth', '23', '549', '7200', 'frozen', '1.1 standard', 'tundra, ice caves, mountain ranges', '100', 'unknown');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Dagobah', '23', '341', '8900', 'murky', 'N/A', 'swamp, jungles', '8', 'unknown');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
-VALUES ('Bespin', '12', '5110', '118000', 'temperate', '1.5 (surface), 1 standard (Cloud City)', 'gas giant', '0', '6000000');
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
+VALUES ('Bespin', '12', '5110', '118000', 'temperate', '1.5 (surface), 1 standard (Cloud City)', 'gas giant', '0',
+        '6000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Endor', '18', '402', '4900', 'temperate', '0.85 standard', 'forests, mountains, lakes', '8', '30000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
-VALUES ('Naboo', '26', '312', '12120', 'temperate', '1 standard', 'grassy hills, swamps, forests, mountains', '12', '4500000000');
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
+VALUES ('Naboo', '26', '312', '12120', 'temperate', '1 standard', 'grassy hills, swamps, forests, mountains', '12',
+        '4500000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
-VALUES ('Coruscant', '24', '368', '12240', 'temperate', '1 standard', 'cityscape, mountains', 'unknown', '1000000000000');
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
+VALUES ('Coruscant', '24', '368', '12240', 'temperate', '1 standard', 'cityscape, mountains', 'unknown',
+        '1000000000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Kamino', '27', '463', '19720', 'temperate', '1 standard', 'ocean', '100', '1000000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
-VALUES ('Geonosis', '30', '256', '11370', 'temperate, arid', '0.9 standard', 'rock, desert, mountain, barren', '5', '100000000000');
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
+VALUES ('Geonosis', '30', '256', '11370', 'temperate, arid', '0.9 standard', 'rock, desert, mountain, barren', '5',
+        '100000000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
-VALUES ('Utapau', '27', '351', '12900', 'temperate, arid, windy', '1 standard', 'scrublands, savanna, canyons, sinkholes', '0.9', '95000000');
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
+VALUES ('Utapau', '27', '351', '12900', 'temperate, arid, windy', '1 standard',
+        'scrublands, savanna, canyons, sinkholes', '0.9', '95000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Mustafar', '36', '412', '4200', 'hot', '1 standard', 'volcanoes, lava rivers, mountains, caves', '0', '20000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Kashyyyk', '26', '381', '12765', 'tropical', '1 standard', 'jungle, forests, lakes, rivers', '60', '45000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Polis Massa', '24', '590', '0', 'artificial temperate ', '0.56 standard', 'airless asteroid', '0', '1000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
-VALUES ('Mygeeto', '12', '167', '10088', 'frigid', '1 standard', 'glaciers, mountains, ice canyons', 'unknown', '19000000');
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
+VALUES ('Mygeeto', '12', '167', '10088', 'frigid', '1 standard', 'glaciers, mountains, ice canyons', 'unknown',
+        '19000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Felucia', '34', '231', '9100', 'hot, humid', '0.75 standard', 'fungus forests', 'unknown', '8500000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
-VALUES ('Cato Neimoidia', '25', '278', '0', 'temperate, moist', '1 standard', 'mountains, fields, forests, rock arches', 'unknown', '10000000');
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
+VALUES ('Cato Neimoidia', '25', '278', '0', 'temperate, moist', '1 standard', 'mountains, fields, forests, rock arches',
+        'unknown', '10000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
-VALUES ('Saleucami', '26', '392', '14920', 'hot', 'unknown', 'caves, desert, mountains, volcanoes', 'unknown', '1400000000');
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
+VALUES ('Saleucami', '26', '392', '14920', 'hot', 'unknown', 'caves, desert, mountains, volcanoes', 'unknown',
+        '1400000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Stewjon', 'unknown', 'unknown', '0', 'temperate', '1 standard', 'grass', 'unknown', 'unknown');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Eriadu', '24', '360', '13490', 'polluted', '1 standard', 'cityscape', 'unknown', '22000000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
-VALUES ('Corellia', '25', '329', '11000', 'temperate', '1 standard', 'plains, urban, hills, forests', '70', '3000000000');
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
+VALUES ('Corellia', '25', '329', '11000', 'temperate', '1 standard', 'plains, urban, hills, forests', '70',
+        '3000000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Rodia', '29', '305', '7549', 'hot', '1 standard', 'jungles, oceans, urban, swamps', '60', '1300000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
-VALUES ('Nal Hutta', '87', '413', '12150', 'temperate', '1 standard', 'urban, oceans, swamps, bogs', 'unknown', '7000000000');
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
+VALUES ('Nal Hutta', '87', '413', '12150', 'temperate', '1 standard', 'urban, oceans, swamps, bogs', 'unknown',
+        '7000000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
-VALUES ('Dantooine', '25', '378', '9830', 'temperate', '1 standard', 'oceans, savannas, mountains, grasslands', 'unknown', '1000');
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
+VALUES ('Dantooine', '25', '378', '9830', 'temperate', '1 standard', 'oceans, savannas, mountains, grasslands',
+        'unknown', '1000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Bestine IV', '26', '680', '6400', 'temperate', 'unknown', 'rocky islands, oceans', '98', '62000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Ord Mantell', '26', '334', '14050', 'temperate', '1 standard', 'plains, seas, mesas', '10', '4000000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('unknown', '0', '0', '0', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
-VALUES ('Trandosha', '25', '371', '0', 'arid', '0.62 standard', 'mountains, seas, grasslands, deserts', 'unknown', '42000000');
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
+VALUES ('Trandosha', '25', '371', '0', 'arid', '0.62 standard', 'mountains, seas, grasslands, deserts', 'unknown',
+        '42000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Socorro', '20', '326', '0', 'arid', '1 standard', 'deserts, mountains', 'unknown', '300000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Mon Cala', '21', '398', '11030', 'temperate', '1', 'oceans, reefs, islands', '100', '27000000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Chandrila', '20', '368', '13500', 'temperate', '1', 'plains, forests', '40', '1200000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Sullust', '20', '263', '12780', 'superheated', '1', 'mountains, volcanoes, rocky deserts', '5', '18500000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Toydaria', '21', '184', '7900', 'temperate', '1', 'swamps, lakes', 'unknown', '11000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
-VALUES ('Malastare', '26', '201', '18880', 'arid, temperate, tropical', '1.56', 'swamps, deserts, jungles, mountains', 'unknown', '2000000000');
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
+VALUES ('Malastare', '26', '201', '18880', 'arid, temperate, tropical', '1.56', 'swamps, deserts, jungles, mountains',
+        'unknown', '2000000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Dathomir', '24', '491', '10480', 'temperate', '0.9', 'forests, deserts, savannas', 'unknown', '5200');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
-VALUES ('Ryloth', '30', '305', '10600', 'temperate, arid, subartic', '1', 'mountains, valleys, deserts, tundra', '5', '1500000000');
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
+VALUES ('Ryloth', '30', '305', '10600', 'temperate, arid, subartic', '1', 'mountains, valleys, deserts, tundra', '5',
+        '1500000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Aleen Minor', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Vulpter', '22', '391', '14900', 'temperate, artic', '1', 'urban, barren', 'unknown', '421000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
-VALUES ('Troiken', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'desert, tundra, rainforests, mountains', 'unknown', 'unknown');
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
+VALUES ('Troiken', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'desert, tundra, rainforests, mountains',
+        'unknown', 'unknown');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Tund', '48', '1770', '12190', 'unknown', 'unknown', 'barren, ash', 'unknown', '0');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
-VALUES ('Haruun Kal', '25', '383', '10120', 'temperate', '0.98', 'toxic cloudsea, plateaus, volcanoes', 'unknown', '705300');
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
+VALUES ('Haruun Kal', '25', '383', '10120', 'temperate', '0.98', 'toxic cloudsea, plateaus, volcanoes', 'unknown',
+        '705300');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Cerea', '27', '386', 'unknown', 'temperate', '1', 'verdant', '20', '450000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
-VALUES ('Glee Anselm', '33', '206', '15600', 'tropical, temperate', '1', 'lakes, islands, swamps, seas', '80', '500000000');
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
+VALUES ('Glee Anselm', '33', '206', '15600', 'tropical, temperate', '1', 'lakes, islands, swamps, seas', '80',
+        '500000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Iridonia', '29', '413', 'unknown', 'unknown', 'unknown', 'rocky canyons, acid pools', 'unknown', 'unknown');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Tholoth', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Iktotch', '22', '481', 'unknown', 'arid, rocky, windy', '1', 'rocky', 'unknown', 'unknown');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Quermia', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Dorin', '22', '409', '13400', 'temperate', '1', 'unknown', 'unknown', 'unknown');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Champala', '27', '318', 'unknown', 'temperate', '1', 'oceans, rainforests, plateaus', 'unknown', '3500000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Mirial', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'deserts', 'unknown', 'unknown');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
-VALUES ('Serenno', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'rainforests, rivers, mountains', 'unknown', 'unknown');
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
+VALUES ('Serenno', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'rainforests, rivers, mountains', 'unknown',
+        'unknown');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
-VALUES ('Concord Dawn', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'jungles, forests, deserts', 'unknown', 'unknown');
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
+VALUES ('Concord Dawn', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'jungles, forests, deserts', 'unknown',
+        'unknown');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Zolan', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Ojom', 'unknown', 'unknown', 'unknown', 'frigid', 'unknown', 'oceans, glaciers', '100', '500000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Skako', '27', '384', 'unknown', 'temperate', '1', 'urban, vines', 'unknown', '500000000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Muunilinst', '28', '412', '13800', 'temperate', '1', 'plains, forests, hills, mountains', '25', '5000000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
-VALUES ('Shili', 'unknown', 'unknown', 'unknown', 'temperate', '1', 'cities, savannahs, seas, plains', 'unknown', 'unknown');
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
+VALUES ('Shili', 'unknown', 'unknown', 'unknown', 'temperate', '1', 'cities, savannahs, seas, plains', 'unknown',
+        'unknown');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
-VALUES ('Kalee', '23', '378', '13850', 'arid, temperate, tropical', '1', 'rainforests, cliffs, canyons, seas', 'unknown', '4000000000');
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
+VALUES ('Kalee', '23', '378', '13850', 'arid, temperate, tropical', '1', 'rainforests, cliffs, canyons, seas',
+        'unknown', '4000000000');
 
-INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
+INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
+                       "SurfaceWater", "Population")
 VALUES ('Umbara', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown');
 
 CREATE TABLE "Characters"
@@ -255,250 +336,332 @@ CREATE TABLE "Characters"
     FOREIGN KEY ("PlanetId") REFERENCES "Planets" ("Id")
 );
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Luke Skywalker', '172', '77', 'blond', 'fair', 'blue', '19BBY', 'male', 1);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('C-3PO', '167', '75', 'n/a', 'gold', 'yellow', '112BBY', 'n/a', 1);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('R2-D2', '96', '32', 'n/a', 'white, blue', 'red', '33BBY', 'n/a', 8);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Darth Vader', '202', '136', 'none', 'white', 'yellow', '41.9BBY', 'male', 1);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Leia Organa', '150', '49', 'brown', 'light', 'brown', '19BBY', 'female', 2);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Owen Lars', '178', '120', 'brown, grey', 'light', 'blue', '52BBY', 'male', 1);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Beru Whitesun lars', '165', '75', 'brown', 'light', 'blue', '47BBY', 'female', 1);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('R5-D4', '97', '32', 'n/a', 'white, red', 'red', 'unknown', 'n/a', 1);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Biggs Darklighter', '183', '84', 'black', 'light', 'brown', '24BBY', 'male', 1);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Obi-Wan Kenobi', '182', '77', 'auburn, white', 'fair', 'blue-gray', '57BBY', 'male', 20);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Anakin Skywalker', '188', '84', 'blond', 'fair', 'blue', '41.9BBY', 'male', 1);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Wilhuff Tarkin', '180', 'unknown', 'auburn, grey', 'fair', 'blue', '64BBY', 'male', 21);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Chewbacca', '228', '112', 'brown', 'unknown', 'blue', '200BBY', 'male', 14);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Han Solo', '180', '80', 'brown', 'fair', 'brown', '29BBY', 'male', 22);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Greedo', '173', '74', 'n/a', 'green', 'black', '44BBY', 'male', 23);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Jabba Desilijic Tiure', '175', '1,358', 'n/a', 'green-tan, brown', 'orange', '600BBY', 'hermaphrodite', 24);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Wedge Antilles', '170', '77', 'brown', 'fair', 'hazel', '21BBY', 'male', 22);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Jek Tono Porkins', '180', '110', 'brown', 'fair', 'blue', 'unknown', 'male', 26);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Yoda', '66', '17', 'white', 'green', 'brown', '896BBY', 'male', 28);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Palpatine', '170', '75', 'grey', 'pale', 'yellow', '82BBY', 'male', 8);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Boba Fett', '183', '78.2', 'black', 'fair', 'brown', '31.5BBY', 'male', 10);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('IG-88', '200', '140', 'none', 'metal', 'red', '15BBY', 'none', 28);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Bossk', '190', '113', 'none', 'green', 'red', '53BBY', 'male', 29);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Lando Calrissian', '177', '79', 'black', 'dark', 'brown', '31BBY', 'male', 30);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Lobot', '175', '79', 'none', 'light', 'blue', '37BBY', 'male', 6);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Ackbar', '180', '83', 'none', 'brown mottle', 'orange', '41BBY', 'male', 31);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Mon Mothma', '150', 'unknown', 'auburn', 'fair', 'blue', '48BBY', 'female', 32);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Arvel Crynyd', 'unknown', 'unknown', 'brown', 'fair', 'brown', 'unknown', 'male', 28);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Wicket Systri Warrick', '88', '20', 'brown', 'brown', 'brown', '8BBY', 'male', 7);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Nien Nunb', '160', '68', 'none', 'grey', 'black', 'unknown', 'male', 33);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Qui-Gon Jinn', '193', '89', 'brown', 'fair', 'blue', '92BBY', 'male', 28);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Nute Gunray', '191', '90', 'none', 'mottled green', 'red', 'unknown', 'male', 18);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Finis Valorum', '170', 'unknown', 'blond', 'fair', 'blue', '91BBY', 'male', 9);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Padmé Amidala', '185', '45', 'brown', 'light', 'brown', '46BBY', 'female', 8);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Jar Jar Binks', '196', '66', 'none', 'orange', 'orange', '52BBY', 'male', 8);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Roos Tarpals', '224', '82', 'none', 'grey', 'orange', 'unknown', 'male', 8);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Rugor Nass', '206', 'unknown', 'none', 'green', 'orange', 'unknown', 'male', 8);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Ric Olié', '183', 'unknown', 'brown', 'fair', 'blue', 'unknown', 'male', 8);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Watto', '137', 'unknown', 'black', 'blue, grey', 'yellow', 'unknown', 'male', 34);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Sebulba', '112', '40', 'none', 'grey, red', 'orange', 'unknown', 'male', 35);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Quarsh Panaka', '183', 'unknown', 'black', 'dark', 'brown', '62BBY', 'male', 8);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Shmi Skywalker', '163', 'unknown', 'black', 'fair', 'brown', '72BBY', 'female', 1);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Darth Maul', '175', '80', 'none', 'red', 'yellow', '54BBY', 'male', 36);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Bib Fortuna', '180', 'unknown', 'none', 'pale', 'pink', 'unknown', 'male', 37);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Ayla Secura', '178', '55', 'none', 'blue', 'hazel', '48BBY', 'female', 37);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Ratts Tyerel', '79', '15', 'none', 'grey, blue', 'unknown', 'unknown', 'male', 38);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Dud Bolt', '94', '45', 'none', 'blue, grey', 'yellow', 'unknown', 'male', 39);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Gasgano', '122', 'unknown', 'none', 'white, blue', 'black', 'unknown', 'male', 40);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Ben Quadinaros', '163', '65', 'none', 'grey, green, yellow', 'orange', 'unknown', 'male', 41);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Mace Windu', '188', '84', 'none', 'dark', 'brown', '72BBY', 'male', 42);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Ki-Adi-Mundi', '198', '82', 'white', 'pale', 'yellow', '92BBY', 'male', 43);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Kit Fisto', '196', '87', 'none', 'green', 'black', 'unknown', 'male', 44);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Eeth Koth', '171', 'unknown', 'black', 'brown', 'brown', 'unknown', 'male', 45);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Adi Gallia', '184', '50', 'none', 'dark', 'blue', 'unknown', 'female', 9);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Saesee Tiin', '188', 'unknown', 'none', 'pale', 'orange', 'unknown', 'male', 47);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Yarael Poof', '264', 'unknown', 'none', 'white', 'yellow', 'unknown', 'male', 48);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Plo Koon', '188', '80', 'none', 'orange', 'black', '22BBY', 'male', 49);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Mas Amedda', '196', 'unknown', 'none', 'blue', 'blue', 'unknown', 'male', 50);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Gregar Typho', '185', '85', 'black', 'dark', 'brown', 'unknown', 'male', 8);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Cordé', '157', 'unknown', 'brown', 'light', 'brown', 'unknown', 'female', 8);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Cliegg Lars', '183', 'unknown', 'brown', 'fair', 'blue', '82BBY', 'male', 1);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Poggle the Lesser', '183', '80', 'none', 'green', 'yellow', 'unknown', 'male', 11);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Luminara Unduli', '170', '56.2', 'black', 'yellow', 'blue', '58BBY', 'female', 51);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Barriss Offee', '166', '50', 'black', 'yellow', 'blue', '40BBY', 'female', 51);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Dormé', '165', 'unknown', 'brown', 'light', 'brown', 'unknown', 'female', 8);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Dooku', '193', '80', 'white', 'fair', 'brown', '102BBY', 'male', 52);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Bail Prestor Organa', '191', 'unknown', 'black', 'tan', 'brown', '67BBY', 'male', 2);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Jango Fett', '183', '79', 'black', 'tan', 'brown', '66BBY', 'male', 53);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Zam Wesell', '168', '55', 'blonde', 'fair, green, yellow', 'yellow', 'unknown', 'female', 54);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Dexter Jettster', '198', '102', 'none', 'brown', 'yellow', 'unknown', 'male', 55);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Lama Su', '229', '88', 'none', 'grey', 'black', 'unknown', 'male', 10);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Taun We', '213', 'unknown', 'none', 'grey', 'black', 'unknown', 'female', 10);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Jocasta Nu', '167', 'unknown', 'white', 'fair', 'blue', 'unknown', 'female', 9);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('R4-P17', '96', 'unknown', 'none', 'silver, red', 'red, blue', 'unknown', 'female', 28);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Wat Tambor', '193', '48', 'none', 'green, grey', 'unknown', 'unknown', 'male', 56);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('San Hill', '191', 'unknown', 'none', 'grey', 'gold', 'unknown', 'male', 57);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Shaak Ti', '178', '57', 'none', 'red, blue, white', 'black', 'unknown', 'female', 58);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Grievous', '216', '159', 'none', 'brown, white', 'green, yellow', 'unknown', 'male', 59);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Tarfful', '234', '136', 'brown', 'brown', 'blue', 'unknown', 'male', 14);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Raymus Antilles', '188', '79', 'brown', 'light', 'brown', 'unknown', 'male', 2);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Sly Moore', '178', '48', 'none', 'pale', 'white', 'unknown', 'female', 60);
 
-INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
 VALUES ('Tion Medon', '206', '80', 'none', 'grey', 'black', 'unknown', 'male', 12);
 
 CREATE TABLE "Vehicles"
@@ -517,121 +680,325 @@ CREATE TABLE "Vehicles"
     "Class"         VARCHAR(50)
 );
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Sand Crawler', 'Digger Crawler', 'Corellia Mining Corporation', '150000', '36.8 ', '30', '46', '30', '50000', '2 months', 'wheeled');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Sand Crawler', 'Digger Crawler', 'Corellia Mining Corporation', '150000', '36.8 ', '30', '46', '30', '50000',
+        '2 months', 'wheeled');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('T-16 skyhopper', 'T-16 skyhopper', 'Incom Corporation', '14500', '10.4 ', '1200', '1', '1', '50', '0', 'repulsorcraft');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('T-16 skyhopper', 'T-16 skyhopper', 'Incom Corporation', '14500', '10.4 ', '1200', '1', '1', '50', '0',
+        'repulsorcraft');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('X-34 landspeeder', 'X-34 landspeeder', 'SoroSuub Corporation', '10550', '3.4 ', '250', '1', '1', '5', 'unknown', 'repulsorcraft');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('X-34 landspeeder', 'X-34 landspeeder', 'SoroSuub Corporation', '10550', '3.4 ', '250', '1', '1', '5',
+        'unknown', 'repulsorcraft');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('TIE/LN starfighter', 'Twin Ion Engine/Ln Starfighter', 'Sienar Fleet Systems', 'unknown', '6.4', '1200', '1', '0', '65', '2 days', 'starfighter');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('TIE/LN starfighter', 'Twin Ion Engine/Ln Starfighter', 'Sienar Fleet Systems', 'unknown', '6.4', '1200', '1',
+        '0', '65', '2 days', 'starfighter');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Snowspeeder', 't-47 airspeeder', 'Incom corporation', 'unknown', '4.5', '650', '2', '0', '10', 'none', 'airspeeder');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Snowspeeder', 't-47 airspeeder', 'Incom corporation', 'unknown', '4.5', '650', '2', '0', '10', 'none',
+        'airspeeder');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('TIE bomber', 'TIE/sa bomber', 'Sienar Fleet Systems', 'unknown', '7.8', '850', '1', '0', 'none', '2 days', 'space/planetary bomber');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('TIE bomber', 'TIE/sa bomber', 'Sienar Fleet Systems', 'unknown', '7.8', '850', '1', '0', 'none', '2 days',
+        'space/planetary bomber');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('AT-AT', 'All Terrain Armored Transport', 'Kuat Drive Yards, Imperial Department of Military Research', 'unknown', '20', '60', '5', '40', '1000', 'unknown', 'assault walker');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('AT-AT', 'All Terrain Armored Transport', 'Kuat Drive Yards, Imperial Department of Military Research',
+        'unknown', '20', '60', '5', '40', '1000', 'unknown', 'assault walker');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('AT-ST', 'All Terrain Scout Transport', 'Kuat Drive Yards, Imperial Department of Military Research', 'unknown', '2', '90', '2', '0', '200', 'none', 'walker');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('AT-ST', 'All Terrain Scout Transport', 'Kuat Drive Yards, Imperial Department of Military Research', 'unknown',
+        '2', '90', '2', '0', '200', 'none', 'walker');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Storm IV Twin-Pod cloud car', 'Storm IV Twin-Pod', 'Bespin Motors', '75000', '7', '1500', '2', '0', '10', '1 day', 'repulsorcraft');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Storm IV Twin-Pod cloud car', 'Storm IV Twin-Pod', 'Bespin Motors', '75000', '7', '1500', '2', '0', '10',
+        '1 day', 'repulsorcraft');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Sail barge', 'Modified Luxury Sail Barge', 'Ubrikkian Industries Custom Vehicle Division', '285000', '30', '100', '26', '500', '2000000', 'Live food tanks', 'sail barge');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Sail barge', 'Modified Luxury Sail Barge', 'Ubrikkian Industries Custom Vehicle Division', '285000', '30',
+        '100', '26', '500', '2000000', 'Live food tanks', 'sail barge');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Bantha-II cargo skiff', 'Bantha-II', 'Ubrikkian Industries', '8000', '9.5', '250', '5', '16', '135000', '1 day', 'repulsorcraft cargo skiff');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Bantha-II cargo skiff', 'Bantha-II', 'Ubrikkian Industries', '8000', '9.5', '250', '5', '16', '135000',
+        '1 day', 'repulsorcraft cargo skiff');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('TIE/IN interceptor', 'Twin Ion Engine Interceptor', 'Sienar Fleet Systems', 'unknown', '9.6', '1250', '1', '0', '75', '2 days', 'starfighter');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('TIE/IN interceptor', 'Twin Ion Engine Interceptor', 'Sienar Fleet Systems', 'unknown', '9.6', '1250', '1', '0',
+        '75', '2 days', 'starfighter');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Imperial Speeder Bike', '74-Z speeder bike', 'Aratech Repulsor Company', '8000', '3', '360', '1', '1', '4', '1 day', 'speeder');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Imperial Speeder Bike', '74-Z speeder bike', 'Aratech Repulsor Company', '8000', '3', '360', '1', '1', '4',
+        '1 day', 'speeder');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Vulture Droid', 'Vulture-class droid starfighter', 'Haor Chall Engineering, Baktoid Armor Workshop', 'unknown', '3.5', '1200', '0', '0', '0', 'none', 'starfighter');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Vulture Droid', 'Vulture-class droid starfighter', 'Haor Chall Engineering, Baktoid Armor Workshop', 'unknown',
+        '3.5', '1200', '0', '0', '0', 'none', 'starfighter');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Multi-Troop Transport', 'Multi-Troop Transport', 'Baktoid Armor Workshop', '138000', '31', '35', '4', '112', '12000', 'unknown', 'repulsorcraft');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Multi-Troop Transport', 'Multi-Troop Transport', 'Baktoid Armor Workshop', '138000', '31', '35', '4', '112',
+        '12000', 'unknown', 'repulsorcraft');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Armored Assault Tank', 'Armoured Assault Tank', 'Baktoid Armor Workshop', 'unknown', '9.75', '55', '4', '6', 'unknown', 'unknown', 'repulsorcraft');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Armored Assault Tank', 'Armoured Assault Tank', 'Baktoid Armor Workshop', 'unknown', '9.75', '55', '4', '6',
+        'unknown', 'unknown', 'repulsorcraft');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Single Trooper Aerial Platform', 'Single Trooper Aerial Platform', 'Baktoid Armor Workshop', '2500', '2', '400', '1', '0', 'none', 'none', 'repulsorcraft');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Single Trooper Aerial Platform', 'Single Trooper Aerial Platform', 'Baktoid Armor Workshop', '2500', '2',
+        '400', '1', '0', 'none', 'none', 'repulsorcraft');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('C-9979 landing craft', 'C-9979 landing craft', 'Haor Chall Engineering', '200000', '210', '587', '140', '284', '1800000', '1 day', 'landing craft');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('C-9979 landing craft', 'C-9979 landing craft', 'Haor Chall Engineering', '200000', '210', '587', '140', '284',
+        '1800000', '1 day', 'landing craft');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Tribubble bongo', 'Tribubble bongo', 'Otoh Gunga Bongameken Cooperative', 'unknown', '15', '85', '1', '2', '1600', 'unknown', 'submarine');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Tribubble bongo', 'Tribubble bongo', 'Otoh Gunga Bongameken Cooperative', 'unknown', '15', '85', '1', '2',
+        '1600', 'unknown', 'submarine');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
 VALUES ('Sith speeder', 'FC-20 speeder bike', 'Razalon', '4000', '1.5', '180', '1', '0', '2', 'unknown', 'speeder');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Zephyr-G swoop bike', 'Zephyr-G swoop bike', 'Mobquet Swoops and Speeders', '5750', '3.68', '350', '1', '1', '200', 'none', 'repulsorcraft');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Zephyr-G swoop bike', 'Zephyr-G swoop bike', 'Mobquet Swoops and Speeders', '5750', '3.68', '350', '1', '1',
+        '200', 'none', 'repulsorcraft');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Koro-2 Exodrive airspeeder', 'Koro-2 Exodrive airspeeder', 'Desler Gizh Outworld Mobility Corporation', 'unknown', '6.6', '800', '1', '1', '80', 'unknown', 'airspeeder');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Koro-2 Exodrive airspeeder', 'Koro-2 Exodrive airspeeder', 'Desler Gizh Outworld Mobility Corporation',
+        'unknown', '6.6', '800', '1', '1', '80', 'unknown', 'airspeeder');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('XJ-6 airspeeder', 'XJ-6 airspeeder', 'Narglatch AirTech prefabricated kit', 'unknown', '6.23', '720', '1', '1', 'unknown', 'unknown', 'airspeeder');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('XJ-6 airspeeder', 'XJ-6 airspeeder', 'Narglatch AirTech prefabricated kit', 'unknown', '6.23', '720', '1', '1',
+        'unknown', 'unknown', 'airspeeder');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('LAAT/i', 'Low Altitude Assault Transport/infrantry', 'Rothana Heavy Engineering', 'unknown', '17.4', '620', '6', '30', '170', 'unknown', 'gunship');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('LAAT/i', 'Low Altitude Assault Transport/infrantry', 'Rothana Heavy Engineering', 'unknown', '17.4', '620',
+        '6', '30', '170', 'unknown', 'gunship');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('LAAT/c', 'Low Altitude Assault Transport/carrier', 'Rothana Heavy Engineering', 'unknown', '28.82', '620', '1', '0', '40000', 'unknown', 'gunship');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('LAAT/c', 'Low Altitude Assault Transport/carrier', 'Rothana Heavy Engineering', 'unknown', '28.82', '620', '1',
+        '0', '40000', 'unknown', 'gunship');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('AT-TE', 'All Terrain Tactical Enforcer', 'Rothana Heavy Engineering, Kuat Drive Yards', 'unknown', '13.2', '60', '6', '36', '10000', '21 days', 'walker');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('AT-TE', 'All Terrain Tactical Enforcer', 'Rothana Heavy Engineering, Kuat Drive Yards', 'unknown', '13.2',
+        '60', '6', '36', '10000', '21 days', 'walker');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('SPHA', 'Self-Propelled Heavy Artillery', 'Rothana Heavy Engineering', 'unknown', '140', '35', '25', '30', '500', '7 days', 'walker');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('SPHA', 'Self-Propelled Heavy Artillery', 'Rothana Heavy Engineering', 'unknown', '140', '35', '25', '30',
+        '500', '7 days', 'walker');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Flitknot speeder', 'Flitknot speeder', 'Huppla Pasa Tisc Shipwrights Collective', '8000', '2', '634', '1', '0', 'unknown', 'unknown', 'speeder');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Flitknot speeder', 'Flitknot speeder', 'Huppla Pasa Tisc Shipwrights Collective', '8000', '2', '634', '1', '0',
+        'unknown', 'unknown', 'speeder');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Neimoidian shuttle', 'Sheathipede-class transport shuttle', 'Haor Chall Engineering', 'unknown', '20', '880', '2', '6', '1000', '7 days', 'transport');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Neimoidian shuttle', 'Sheathipede-class transport shuttle', 'Haor Chall Engineering', 'unknown', '20', '880',
+        '2', '6', '1000', '7 days', 'transport');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Geonosian starfighter', 'Nantex-class territorial defense', 'Huppla Pasa Tisc Shipwrights Collective', 'unknown', '9.8', '20000', '1', '0', 'unknown', 'unknown', 'starfighter');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Geonosian starfighter', 'Nantex-class territorial defense', 'Huppla Pasa Tisc Shipwrights Collective',
+        'unknown', '9.8', '20000', '1', '0', 'unknown', 'unknown', 'starfighter');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Tsmeu-6 personal wheel bike', 'Tsmeu-6 personal wheel bike', 'Z-Gomot Ternbuell Guppat Corporation', '15000', '3.5', '330', '1', '1', '10', 'none', 'wheeled walker');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Tsmeu-6 personal wheel bike', 'Tsmeu-6 personal wheel bike', 'Z-Gomot Ternbuell Guppat Corporation', '15000',
+        '3.5', '330', '1', '1', '10', 'none', 'wheeled walker');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Emergency Firespeeder', 'Fire suppression speeder', 'unknown', 'unknown', 'unknown', 'unknown', '2', 'unknown', 'unknown', 'unknown', 'fire suppression ship');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Emergency Firespeeder', 'Fire suppression speeder', 'unknown', 'unknown', 'unknown', 'unknown', '2', 'unknown',
+        'unknown', 'unknown', 'fire suppression ship');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Droid tri-fighter', 'tri-fighter', 'Colla Designs, Phlac-Arphocc Automata Industries', '20000', '5.4', '1180', '1', '0', '0', 'none', 'droid starfighter');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Droid tri-fighter', 'tri-fighter', 'Colla Designs, Phlac-Arphocc Automata Industries', '20000', '5.4', '1180',
+        '1', '0', '0', 'none', 'droid starfighter');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Oevvaor jet catamaran', 'Oevvaor jet catamaran', 'Appazanna Engineering Works', '12125', '15.1', '420', '2', '2', '50', '3 days', 'airspeeder');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Oevvaor jet catamaran', 'Oevvaor jet catamaran', 'Appazanna Engineering Works', '12125', '15.1', '420', '2',
+        '2', '50', '3 days', 'airspeeder');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Raddaugh Gnasp fluttercraft', 'Raddaugh Gnasp fluttercraft', 'Appazanna Engineering Works', '14750', '7', '310', '2', '0', '20', 'none', 'air speeder');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Raddaugh Gnasp fluttercraft', 'Raddaugh Gnasp fluttercraft', 'Appazanna Engineering Works', '14750', '7',
+        '310', '2', '0', '20', 'none', 'air speeder');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Clone turbo tank', 'HAVw A6 Juggernaut', 'Kuat Drive Yards', '350000', '49.4', '160', '20', '300', '30000', '20 days', 'wheeled walker');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Clone turbo tank', 'HAVw A6 Juggernaut', 'Kuat Drive Yards', '350000', '49.4', '160', '20', '300', '30000',
+        '20 days', 'wheeled walker');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Corporate Alliance tank droid', 'NR-N99 Persuader-class droid enforcer', 'Techno Union', '49000', '10.96', '100', '0', '4', 'none', 'none', 'droid tank');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Corporate Alliance tank droid', 'NR-N99 Persuader-class droid enforcer', 'Techno Union', '49000', '10.96',
+        '100', '0', '4', 'none', 'none', 'droid tank');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('Droid gunship', 'HMP droid gunship', 'Baktoid Fleet Ordnance, Haor Chall Engineering', '60000', '12.3', '820', '0', '0', '0', 'none', 'airspeeder');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('Droid gunship', 'HMP droid gunship', 'Baktoid Fleet Ordnance, Haor Chall Engineering', '60000', '12.3', '820',
+        '0', '0', '0', 'none', 'airspeeder');
 
-INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "Consumables", "Class")
-VALUES ('AT-RT', 'All Terrain Recon Transport', 'Kuat Drive Yards', '40000', '3.2', '90', '1', '0', '20', '1 day', 'walker');
+INSERT INTO "Vehicles" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers",
+                        "CargoCapacity", "Consumables", "Class")
+VALUES ('AT-RT', 'All Terrain Recon Transport', 'Kuat Drive Yards', '40000', '3.2', '90', '1', '0', '20', '1 day',
+        'walker');
+
+CREATE TABLE "Starships"
+(
+    "Id"               SERIAL PRIMARY KEY,
+    "Name"             VARCHAR(255) NOT NULL,
+    "Model"            VARCHAR(255),
+    "Manufacturer"     VARCHAR(255),
+    "CostInCredits"    VARCHAR(50),
+    "Length"           VARCHAR(50),
+    "MaxSpeed"         VARCHAR(50),
+    "Crew"             VARCHAR(50),
+    "Passengers"       VARCHAR(50),
+    "CargoCapacity"    VARCHAR(50),
+    "HyperdriveRating" VARCHAR(50),
+    "Mglt"             VARCHAR(50),
+    "Consumables"      VARCHAR(50),
+    "Class"            VARCHAR(50)
+);
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('CR90 corvette', 'CR90 corvette', 'Corellian Engineering Corporation', '3500000', '150', '950', '30-165', '600', '3000000', '2.0', '60', '1 year', 'corvette');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Star Destroyer', 'Imperial I-class Star Destroyer', 'Kuat Drive Yards', '150000000', '1,600', '975', '47,060', 'n/a', '36000000', '2.0', '60', '2 years', 'Star Destroyer');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Sentinel-class landing craft', 'Sentinel-class landing craft', 'Sienar Fleet Systems, Cyngus Spaceworks', '240000', '38', '1000', '5', '75', '180000', '1.0', '70', '1 month', 'landing craft');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Death Star', 'DS-1 Orbital Battle Station', 'Imperial Department of Military Research, Sienar Fleet Systems', '1000000000000', '120000', 'n/a', '342,953', '843,342', '1000000000000', '4.0', '10', '3 years', 'Deep Space Mobile Battlestation');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Millennium Falcon', 'YT-1300 light freighter', 'Corellian Engineering Corporation', '100000', '34.37', '1050', '4', '6', '100000', '0.5', '75', '2 months', 'Light freighter');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Y-wing', 'BTL Y-wing', 'Koensayr Manufacturing', '134999', '14', '1000km', '2', '0', '110', '1.0', '80', '1 week', 'assault starfighter');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('X-wing', 'T-65 X-wing', 'Incom Corporation', '149999', '12.5', '1050', '1', '0', '110', '1.0', '100', '1 week', 'Starfighter');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('TIE Advanced x1', 'Twin Ion Engine Advanced x1', 'Sienar Fleet Systems', 'unknown', '9.2', '1200', '1', '0', '150', '1.0', '105', '5 days', 'Starfighter');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Executor', 'Executor-class star dreadnought', 'Kuat Drive Yards, Fondor Shipyards', '1143350000', '19000', 'n/a', '279,144', '38000', '250000000', '2.0', '40', '6 years', 'Star dreadnought');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Rebel transport', 'GR-75 medium transport', 'Gallofree Yards, Inc.', 'unknown', '90', '650', '6', '90', '19000000', '4.0', '20', '6 months', 'Medium transport');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Slave 1', 'Firespray-31-class patrol and attack', 'Kuat Systems Engineering', 'unknown', '21.5', '1000', '1', '6', '70000', '3.0', '70', '1 month', 'Patrol craft');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Imperial shuttle', 'Lambda-class T-4a shuttle', 'Sienar Fleet Systems', '240000', '20', '850', '6', '20', '80000', '1.0', '50', '2 months', 'Armed government transport');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('EF76 Nebulon-B escort frigate', 'EF76 Nebulon-B escort frigate', 'Kuat Drive Yards', '8500000', '300', '800', '854', '75', '6000000', '2.0', '40', '2 years', 'Escort ship');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Calamari Cruiser', 'MC80 Liberty type Star Cruiser', 'Mon Calamari shipyards', '104000000', '1200', 'n/a', '5400', '1200', 'unknown', '1.0', '60', '2 years', 'Star Cruiser');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('A-wing', 'RZ-1 A-wing Interceptor', 'Alliance Underground Engineering, Incom Corporation', '175000', '9.6', '1300', '1', '0', '40', '1.0', '120', '1 week', 'Starfighter');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('B-wing', 'A/SF-01 B-wing starfighter', 'Slayn & Korpil', '220000', '16.9', '950', '1', '0', '45', '2.0', '91', '1 week', 'Assault Starfighter');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Republic Cruiser', 'Consular-class cruiser', 'Corellian Engineering Corporation', 'unknown', '115', '900', '9', '16', 'unknown', '2.0', 'unknown', 'unknown', 'Space cruiser');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Droid control ship', 'Lucrehulk-class Droid Control Ship', 'Hoersch-Kessel Drive, Inc.', 'unknown', '3170', 'n/a', '175', '139000', '4000000000', '2.0', 'unknown', '500 days', 'Droid control ship');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Naboo fighter', 'N-1 starfighter', 'Theed Palace Space Vessel Engineering Corps', '200000', '11', '1100', '1', '0', '65', '1.0', 'unknown', '7 days', 'Starfighter');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Naboo Royal Starship', 'J-type 327 Nubian royal starship', 'Theed Palace Space Vessel Engineering Corps, Nubia Star Drives', 'unknown', '76', '920', '8', 'unknown', 'unknown', '1.8', 'unknown', 'unknown', 'yacht');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Scimitar', 'Star Courier', 'Republic Sienar Systems', '55000000', '26.5', '1180', '1', '6', '2500000', '1.5', 'unknown', '30 days', 'Space Transport');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('J-type diplomatic barge', 'J-type diplomatic barge', 'Theed Palace Space Vessel Engineering Corps, Nubia Star Drives', '2000000', '39', '2000', '5', '10', 'unknown', '0.7', 'unknown', '1 year', 'Diplomatic barge');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('AA-9 Coruscant freighter', 'Botajef AA-9 Freighter-Liner', 'Botajef Shipyards', 'unknown', '390', 'unknown', 'unknown', '30000', 'unknown', 'unknown', 'unknown', 'unknown', 'freighter');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Jedi starfighter', 'Delta-7 Aethersprite-class interceptor', 'Kuat Systems Engineering', '180000', '8', '1150', '1', '0', '60', '1.0', 'unknown', '7 days', 'Starfighter');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('H-type Nubian yacht', 'H-type Nubian yacht', 'Theed Palace Space Vessel Engineering Corps', 'unknown', '47.9', '8000', '4', 'unknown', 'unknown', '0.9', 'unknown', 'unknown', 'yacht');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Republic Assault ship', 'Acclamator I-class assault ship', 'Rothana Heavy Engineering', 'unknown', '752', 'unknown', '700', '16000', '11250000', '0.6', 'unknown', '2 years', 'assault ship');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Solar Sailer', 'Punworcca 116-class interstellar sloop', 'Huppla Pasa Tisc Shipwrights Collective', '35700', '15.2', '1600', '3', '11', '240', '1.5', 'unknown', '7 days', 'yacht');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Trade Federation cruiser', 'Providence-class carrier/destroyer', 'Rendili StarDrive, Free Dac Volunteers Engineering corps.', '125000000', '1088', '1050', '600', '48247', '50000000', '1.5', 'unknown', '4 years', 'capital ship');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Theta-class T-2c shuttle', 'Theta-class T-2c shuttle', 'Cygnus Spaceworks', '1000000', '18.5', '2000', '5', '16', '50000', '1.0', 'unknown', '56 days', 'transport');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Republic attack cruiser', 'Senator-class Star Destroyer', 'Kuat Drive Yards, Allanteen Six shipyards', '59000000', '1137', '975', '7400', '2000', '20000000', '1.0', 'unknown', '2 years', 'star destroyer');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Naboo star skiff', 'J-type star skiff', 'Theed Palace Space Vessel Engineering Corps/Nubia Star Drives, Incorporated', 'unknown', '29.2', '1050', '3', '3', 'unknown', '0.5', 'unknown', 'unknown', 'yacht');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Jedi Interceptor', 'Eta-2 Actis-class light interceptor', 'Kuat Systems Engineering', '320000', '5.47', '1500', '1', '0', '60', '1.0', 'unknown', '2 days', 'starfighter');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('arc-170', 'Aggressive Reconnaissance-170 starfighte', 'Incom Corporation, Subpro Corporation', '155000', '14.5', '1000', '3', '0', '110', '1.0', '100', '5 days', 'starfighter');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Banking clan frigte', 'Munificent-class star frigate', 'Hoersch-Kessel Drive, Inc, Gwori Revolutionary Industries', '57000000', '825', 'unknown', '200', 'unknown', '40000000', '1.0', 'unknown', '2 years', 'cruiser');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('Belbullab-22 starfighter', 'Belbullab-22 starfighter', 'Feethan Ottraw Scalable Assemblies', '168000', '6.71', '1100', '1', '0', '140', '6', 'unknown', '7 days', 'starfighter');
+
+INSERT INTO "Starships" ("Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew", "Passengers", "CargoCapacity", "HyperdriveRating", "Mglt", "Consumables", "Class")
+VALUES ('V-wing', 'Alpha-3 Nimbus-class V-wing starfighter', 'Kuat Systems Engineering', '102500', '7.9', '1050', '1', '0', '60', '1.0', 'unknown', '15 hours', 'starfighter');
+
 
 
