@@ -240,3 +240,265 @@ VALUES ('Kalee', '23', '378', '13850', 'arid, temperate, tropical', '1', 'rainfo
 INSERT INTO "Planets" ("Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain", "SurfaceWater", "Population")
 VALUES ('Umbara', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown');
 
+CREATE TABLE "Characters"
+(
+    "Id"        SERIAL PRIMARY KEY,
+    "Name"      VARCHAR(255) NOT NULL,
+    "Height"    VARCHAR(50),
+    "Weight"    VARCHAR(50),
+    "HairColor" VARCHAR(50),
+    "SkinColor" VARCHAR(50),
+    "EyeColor"  VARCHAR(50),
+    "BirthYear" VARCHAR(50),
+    "Gender"    VARCHAR(50),
+    "PlanetId"  SMALLINT,
+    FOREIGN KEY ("PlanetId") REFERENCES "Planets" ("Id")
+);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Luke Skywalker', '172', '77', 'blond', 'fair', 'blue', '19BBY', 'male', 1);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('C-3PO', '167', '75', 'n/a', 'gold', 'yellow', '112BBY', 'n/a', 1);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('R2-D2', '96', '32', 'n/a', 'white, blue', 'red', '33BBY', 'n/a', 8);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Darth Vader', '202', '136', 'none', 'white', 'yellow', '41.9BBY', 'male', 1);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Leia Organa', '150', '49', 'brown', 'light', 'brown', '19BBY', 'female', 2);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Owen Lars', '178', '120', 'brown, grey', 'light', 'blue', '52BBY', 'male', 1);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Beru Whitesun lars', '165', '75', 'brown', 'light', 'blue', '47BBY', 'female', 1);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('R5-D4', '97', '32', 'n/a', 'white, red', 'red', 'unknown', 'n/a', 1);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Biggs Darklighter', '183', '84', 'black', 'light', 'brown', '24BBY', 'male', 1);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Obi-Wan Kenobi', '182', '77', 'auburn, white', 'fair', 'blue-gray', '57BBY', 'male', 20);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Anakin Skywalker', '188', '84', 'blond', 'fair', 'blue', '41.9BBY', 'male', 1);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Wilhuff Tarkin', '180', 'unknown', 'auburn, grey', 'fair', 'blue', '64BBY', 'male', 21);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Chewbacca', '228', '112', 'brown', 'unknown', 'blue', '200BBY', 'male', 14);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Han Solo', '180', '80', 'brown', 'fair', 'brown', '29BBY', 'male', 22);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Greedo', '173', '74', 'n/a', 'green', 'black', '44BBY', 'male', 23);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Jabba Desilijic Tiure', '175', '1,358', 'n/a', 'green-tan, brown', 'orange', '600BBY', 'hermaphrodite', 24);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Wedge Antilles', '170', '77', 'brown', 'fair', 'hazel', '21BBY', 'male', 22);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Jek Tono Porkins', '180', '110', 'brown', 'fair', 'blue', 'unknown', 'male', 26);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Yoda', '66', '17', 'white', 'green', 'brown', '896BBY', 'male', 28);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Palpatine', '170', '75', 'grey', 'pale', 'yellow', '82BBY', 'male', 8);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Boba Fett', '183', '78.2', 'black', 'fair', 'brown', '31.5BBY', 'male', 10);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('IG-88', '200', '140', 'none', 'metal', 'red', '15BBY', 'none', 28);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Bossk', '190', '113', 'none', 'green', 'red', '53BBY', 'male', 29);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Lando Calrissian', '177', '79', 'black', 'dark', 'brown', '31BBY', 'male', 30);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Lobot', '175', '79', 'none', 'light', 'blue', '37BBY', 'male', 6);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Ackbar', '180', '83', 'none', 'brown mottle', 'orange', '41BBY', 'male', 31);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Mon Mothma', '150', 'unknown', 'auburn', 'fair', 'blue', '48BBY', 'female', 32);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Arvel Crynyd', 'unknown', 'unknown', 'brown', 'fair', 'brown', 'unknown', 'male', 28);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Wicket Systri Warrick', '88', '20', 'brown', 'brown', 'brown', '8BBY', 'male', 7);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Nien Nunb', '160', '68', 'none', 'grey', 'black', 'unknown', 'male', 33);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Qui-Gon Jinn', '193', '89', 'brown', 'fair', 'blue', '92BBY', 'male', 28);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Nute Gunray', '191', '90', 'none', 'mottled green', 'red', 'unknown', 'male', 18);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Finis Valorum', '170', 'unknown', 'blond', 'fair', 'blue', '91BBY', 'male', 9);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Padmé Amidala', '185', '45', 'brown', 'light', 'brown', '46BBY', 'female', 8);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Jar Jar Binks', '196', '66', 'none', 'orange', 'orange', '52BBY', 'male', 8);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Roos Tarpals', '224', '82', 'none', 'grey', 'orange', 'unknown', 'male', 8);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Rugor Nass', '206', 'unknown', 'none', 'green', 'orange', 'unknown', 'male', 8);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Ric Olié', '183', 'unknown', 'brown', 'fair', 'blue', 'unknown', 'male', 8);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Watto', '137', 'unknown', 'black', 'blue, grey', 'yellow', 'unknown', 'male', 34);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Sebulba', '112', '40', 'none', 'grey, red', 'orange', 'unknown', 'male', 35);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Quarsh Panaka', '183', 'unknown', 'black', 'dark', 'brown', '62BBY', 'male', 8);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Shmi Skywalker', '163', 'unknown', 'black', 'fair', 'brown', '72BBY', 'female', 1);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Darth Maul', '175', '80', 'none', 'red', 'yellow', '54BBY', 'male', 36);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Bib Fortuna', '180', 'unknown', 'none', 'pale', 'pink', 'unknown', 'male', 37);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Ayla Secura', '178', '55', 'none', 'blue', 'hazel', '48BBY', 'female', 37);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Ratts Tyerel', '79', '15', 'none', 'grey, blue', 'unknown', 'unknown', 'male', 38);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Dud Bolt', '94', '45', 'none', 'blue, grey', 'yellow', 'unknown', 'male', 39);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Gasgano', '122', 'unknown', 'none', 'white, blue', 'black', 'unknown', 'male', 40);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Ben Quadinaros', '163', '65', 'none', 'grey, green, yellow', 'orange', 'unknown', 'male', 41);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Mace Windu', '188', '84', 'none', 'dark', 'brown', '72BBY', 'male', 42);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Ki-Adi-Mundi', '198', '82', 'white', 'pale', 'yellow', '92BBY', 'male', 43);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Kit Fisto', '196', '87', 'none', 'green', 'black', 'unknown', 'male', 44);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Eeth Koth', '171', 'unknown', 'black', 'brown', 'brown', 'unknown', 'male', 45);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Adi Gallia', '184', '50', 'none', 'dark', 'blue', 'unknown', 'female', 9);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Saesee Tiin', '188', 'unknown', 'none', 'pale', 'orange', 'unknown', 'male', 47);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Yarael Poof', '264', 'unknown', 'none', 'white', 'yellow', 'unknown', 'male', 48);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Plo Koon', '188', '80', 'none', 'orange', 'black', '22BBY', 'male', 49);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Mas Amedda', '196', 'unknown', 'none', 'blue', 'blue', 'unknown', 'male', 50);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Gregar Typho', '185', '85', 'black', 'dark', 'brown', 'unknown', 'male', 8);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Cordé', '157', 'unknown', 'brown', 'light', 'brown', 'unknown', 'female', 8);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Cliegg Lars', '183', 'unknown', 'brown', 'fair', 'blue', '82BBY', 'male', 1);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Poggle the Lesser', '183', '80', 'none', 'green', 'yellow', 'unknown', 'male', 11);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Luminara Unduli', '170', '56.2', 'black', 'yellow', 'blue', '58BBY', 'female', 51);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Barriss Offee', '166', '50', 'black', 'yellow', 'blue', '40BBY', 'female', 51);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Dormé', '165', 'unknown', 'brown', 'light', 'brown', 'unknown', 'female', 8);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Dooku', '193', '80', 'white', 'fair', 'brown', '102BBY', 'male', 52);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Bail Prestor Organa', '191', 'unknown', 'black', 'tan', 'brown', '67BBY', 'male', 2);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Jango Fett', '183', '79', 'black', 'tan', 'brown', '66BBY', 'male', 53);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Zam Wesell', '168', '55', 'blonde', 'fair, green, yellow', 'yellow', 'unknown', 'female', 54);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Dexter Jettster', '198', '102', 'none', 'brown', 'yellow', 'unknown', 'male', 55);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Lama Su', '229', '88', 'none', 'grey', 'black', 'unknown', 'male', 10);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Taun We', '213', 'unknown', 'none', 'grey', 'black', 'unknown', 'female', 10);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Jocasta Nu', '167', 'unknown', 'white', 'fair', 'blue', 'unknown', 'female', 9);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('R4-P17', '96', 'unknown', 'none', 'silver, red', 'red, blue', 'unknown', 'female', 28);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Wat Tambor', '193', '48', 'none', 'green, grey', 'unknown', 'unknown', 'male', 56);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('San Hill', '191', 'unknown', 'none', 'grey', 'gold', 'unknown', 'male', 57);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Shaak Ti', '178', '57', 'none', 'red, blue, white', 'black', 'unknown', 'female', 58);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Grievous', '216', '159', 'none', 'brown, white', 'green, yellow', 'unknown', 'male', 59);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Tarfful', '234', '136', 'brown', 'brown', 'blue', 'unknown', 'male', 14);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Raymus Antilles', '188', '79', 'brown', 'light', 'brown', 'unknown', 'male', 2);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Sly Moore', '178', '48', 'none', 'pale', 'white', 'unknown', 'female', 60);
+
+INSERT INTO "Characters" ("Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender", "PlanetId")
+VALUES ('Tion Medon', '206', '80', 'none', 'grey', 'black', 'unknown', 'male', 12);
+
+
