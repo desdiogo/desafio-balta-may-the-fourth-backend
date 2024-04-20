@@ -31,5 +31,9 @@ public class MayTheFourthDbContext: DbContext
         modelBuilder.Entity<Movie>()
             .HasMany(e => e.Planets)
             .WithMany(e => e.Movies);
+        
+        modelBuilder.Entity<Movie>()
+            .HasMany(e => e.Vehicles)
+            .WithMany(e => e.Movies);
     }
 }

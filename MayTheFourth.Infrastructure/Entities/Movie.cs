@@ -11,4 +11,5 @@ public class Movie
     public DateOnly ReleaseDate { get; set; }
     public IEnumerable<Character> Characters { get; } = [];
     public IEnumerable<Planet> Planets { get; } = [];
+    public IEnumerable<Vehicle> Vehicles { get; } = [];
 }
