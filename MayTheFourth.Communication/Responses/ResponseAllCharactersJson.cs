@@ -1,4 +1,4 @@
-﻿namespace MayTheFourth.Communication.Response;
+﻿namespace MayTheFourth.Communication.Responses;
 
 public class ResponseAllCharactersJson
 {
