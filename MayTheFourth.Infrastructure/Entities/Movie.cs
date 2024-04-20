@@ -9,4 +9,5 @@ public class Movie
     public string Director { get; set; } = string.Empty;
     public string Producer { get; set; } = string.Empty;
     public DateOnly ReleaseDate { get; set; }
+    public List<Character> Characters { get; } = [];
 }

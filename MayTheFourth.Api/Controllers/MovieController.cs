@@ -1,5 +1,6 @@
 using MayTheFourth.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace MayTheFourth.Api.Controllers;
 
@@ -11,7 +12,10 @@ public class MovieController : ControllerBase
    public IActionResult ListMovies()
    {
       var dbContext = new MayTheFourthDbContext();
-      var response = dbContext.Movies.ToList();
+      var response = dbContext.Movies.Include(ev => ev.Characters).Select(movie =>
+      new {
+         Characters = movie.Characters.Select(character => new {Name = character.Name}).ToList()
+      }).ToList();
       
       return Ok(response);
    }

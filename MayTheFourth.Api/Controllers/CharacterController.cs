@@ -13,16 +13,12 @@ public class CharacterController : ControllerBase
    public IActionResult ListCharacters()
    {
       var dbContext = new MayTheFourthDbContext();
-      var response = dbContext.Characters.Include(ev => ev.Planet).Select(character => new
+      var response = dbContext.Characters.Include(ev => ev.Movies).Select(character => new
       {
-         Name = character.Name,
-         Height = character.Height,
-         Weight = character.Weight,
-         Planet = new
+         Movies = character.Movies.Select(ev => new
          {
-            Id = character.Planet.Id,
-            Name = character.Planet.Name
-         }
+            Title = ev.Title
+         })
       }).ToList();
       
       return Ok(response);
