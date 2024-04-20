@@ -13,4 +13,5 @@ public class Planet
     public string SurfaceWater { get; set; } = string.Empty;
     public string Population { get; set; } = string.Empty;
     public IEnumerable<Character> Characters { get; } = [];
+    public IEnumerable<Movie> Movies { get; } = [];
 }

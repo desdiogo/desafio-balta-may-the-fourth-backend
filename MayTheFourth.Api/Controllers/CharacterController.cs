@@ -9,18 +9,18 @@ namespace MayTheFourth.Api.Controllers;
 [Route("api/[controller]")]
 public class CharacterController : ControllerBase
 {
-   [HttpGet]
-   public IActionResult ListCharacters()
-   {
-      var dbContext = new MayTheFourthDbContext();
-      var response = dbContext.Characters.Include(ev => ev.Movies).Select(character => new
-      {
-         Movies = character.Movies.Select(ev => new
-         {
-            Title = ev.Title
-         })
-      }).ToList();
-      
-      return Ok(response);
-   }
+    [HttpGet]
+    public IActionResult ListCharacters()
+    {
+        var dbContext = new MayTheFourthDbContext();
+        var response = dbContext.Characters.Select(character => new
+        {
+            Movies = character.Movies.Select(ev => new
+            {
+                Title = ev.Title
+            })
+        }).ToList();
+
+        return Ok(response);
+    }
 }

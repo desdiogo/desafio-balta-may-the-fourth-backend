@@ -1411,5 +1411,111 @@ VALUES (6, 82);
 INSERT INTO "CharacterMovie" ("MoviesId", "CharactersId")
 VALUES (6, 83);
 
+CREATE TABLE "MoviePlanet"
+(
+    "MoviesId"     SMALLINT REFERENCES "Movies" ("Id"),
+    "PlanetsId" SMALLINT REFERENCES "Planets" ("Id")
+);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (1, 1);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (1, 2);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (1, 3);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (2, 4);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (2, 5);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (2, 6);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (2, 27);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (3, 1);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (3, 5);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (3, 7);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (3, 8);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (3, 9);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (4, 1);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (4, 8);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (4, 9);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (5, 1);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (5, 8);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (5, 9);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (5, 10);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (5, 11);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (6, 1);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (6, 2);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (6, 5);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (6, 8);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (6, 9);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (6, 12);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (6, 13);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (6, 14);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (6, 15);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (6, 16);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (6, 17);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (6, 18);
+
+INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
+VALUES (6, 19);
+
+
 
 

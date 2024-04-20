@@ -24,8 +24,12 @@ public class MayTheFourthDbContext: DbContext
             .HasForeignKey(e => e.PlanetId)
             .IsRequired();
         
-        modelBuilder.Entity<Character>()
-            .HasMany(e => e.Movies)
-            .WithMany(e => e.Characters);
+        modelBuilder.Entity<Movie>()
+            .HasMany(e => e.Characters)
+            .WithMany(e => e.Movies);
+        
+        modelBuilder.Entity<Movie>()
+            .HasMany(e => e.Planets)
+            .WithMany(e => e.Movies);
     }
 }
