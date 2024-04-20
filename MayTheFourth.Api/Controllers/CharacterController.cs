@@ -1,8 +1,6 @@
-using MayTheFourth.Communication.Response;
-using MayTheFourth.Infrastructure;
-using MayTheFourth.Infrastructure.Entities;
+using MayTheFourth.Application.UseCases.Characters;
+using MayTheFourth.Communication.Responses;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace MayTheFourth.Api.Controllers;
 
@@ -11,30 +9,12 @@ namespace MayTheFourth.Api.Controllers;
 public class CharacterController : ControllerBase
 {
     [HttpGet]
-    [ProducesResponseType(typeof(List<ResponseAllCharactersJson>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ResponseAllPlanetsJson), StatusCodes.Status200OK)]
     public IActionResult ListAllCharacters()
     {
-        var dbContext = new MayTheFourthDbContext();
-        var response = dbContext.Characters
-            .Select(character =>
-                new ResponseAllCharactersJson()
-                {
-                    Name = character.Name,
-                    Height = character.Height,
-                    Weight = character.Weight,
-                    HairColor = character.HairColor,
-                    SkinColor = character.SkinColor,
-                    EyeColor = character.EyeColor,
-                    BirthYear = character.BirthYear,
-                    Gender =  character.Gender,
-                    Planet =  new ResponseGenericJson
-                    {
-                        Id = character.Planet.Id,
-                        Name = character.Planet.Name
-                    },
-                    Movies = character.Movies.Select(movie => new ResponseMovieJson { Id = movie.Id,Title = movie.Title })
-                }).ToList();
-
+        var useCase = new GetAllCharactersUseCase();
+        var response = useCase.Execute();
+    
         return Ok(response);
     }
 }
