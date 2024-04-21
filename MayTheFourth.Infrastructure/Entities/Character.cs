@@ -13,5 +13,5 @@ public class Character
     public string Gender { get; set; } = string.Empty;
     public ushort PlanetId { get; set; }
     public Planet Planet  { get; set; }
-    public IEnumerable<Movie> Movies { get; } = [];
+    public List<Movie> Movies { get; set; }
 }

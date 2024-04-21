@@ -23,13 +23,13 @@ public class GetAllMoviesUseCase
                     Producer = movie.Producer,
                     ReleaseDate = movie.ReleaseDate,
                     Characters = movie.Characters.Select(character => new ResponseCharacterSimplifiedJson
-                        { Id = character.Id, Name = character.Name }),
+                        { Id = character.Id, Name = character.Name }).ToList(),
                     Planets = movie.Planets.Select(planet => new ResponsePlanetSimplifiedJson
-                        { Id = planet.Id, Name = planet.Name }),
+                        { Id = planet.Id, Name = planet.Name }).ToList(),
                     Vehicles = movie.Vehicles.Select(vehicle => new ResponseVehicleSimplifiedJson
-                        { Id = vehicle.Id, Name = vehicle.Name }),
+                        { Id = vehicle.Id, Name = vehicle.Name }).ToList(),
                     Starships = movie.Starships.Select(starship => new ResponseStarshpSimplifiedJson
-                        { Id = starship.Id, Name = starship.Name })
+                        { Id = starship.Id, Name = starship.Name }).ToList()
                 }).ToList()
         };
     }
