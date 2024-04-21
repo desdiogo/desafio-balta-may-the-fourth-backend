@@ -21,6 +21,7 @@ public class VehicleController : ControllerBase
     [HttpGet]
     [Route("{id}")]
     [ProducesResponseType(typeof(ResponseVehicleJson), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
     public IActionResult ListVehicleById([FromRoute] ushort id)
     {
         var useCase = new GetVehicleByIdUseCase();

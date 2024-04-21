@@ -21,6 +21,7 @@ public class StarshipController : ControllerBase
     [HttpGet]
     [Route("{id}")]
     [ProducesResponseType(typeof(ResponseStarshipJson), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
     public IActionResult ListStarshipById([FromRoute] ushort id)
     {
         var useCase = new GetStarshipByIdUseCase();
