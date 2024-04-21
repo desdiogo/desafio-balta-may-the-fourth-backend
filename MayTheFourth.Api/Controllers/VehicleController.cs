@@ -17,4 +17,15 @@ public class VehicleController : ControllerBase
     
         return Ok(response);
     }
+    
+    [HttpGet]
+    [Route("{id}")]
+    [ProducesResponseType(typeof(ResponseVehicleJson), StatusCodes.Status200OK)]
+    public IActionResult ListVehicleById([FromRoute] ushort id)
+    {
+        var useCase = new GetVehicleByIdUseCase();
+        var response = useCase.Execute(id);
+
+        return Ok(response);
+    }
 }

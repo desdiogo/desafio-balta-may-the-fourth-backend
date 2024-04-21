@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MayTheFourth.Application.UseCases.Starships;
 
-public class GetStarshipById
+public class GetStarshipByIdUseCase
 {
     private readonly MayTheFourthDbContext _dbContext = new();
 

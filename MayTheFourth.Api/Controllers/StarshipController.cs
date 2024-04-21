@@ -23,7 +23,7 @@ public class StarshipController : ControllerBase
     [ProducesResponseType(typeof(ResponseStarshipJson), StatusCodes.Status200OK)]
     public IActionResult ListStarshipById([FromRoute] ushort id)
     {
-        var useCase = new GetStarshipById();
+        var useCase = new GetStarshipByIdUseCase();
         var response = useCase.Execute(id);
 
         return Ok(response);

@@ -27,7 +27,7 @@ public class GetAllVehiclesUseCase
                 Consumables = vehicle.Consumables,
                 Class = vehicle.Class,
                 Movies = vehicle.Movies.Select(movie => new ResponseMovieSimplifiedJson()
-                    { Id = movie.Id, Title = movie.Title })
+                    { Id = movie.Id, Title = movie.Title }).ToList()
             }).ToList()
         };
     }

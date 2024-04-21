@@ -13,5 +13,5 @@ public class ResponseVehicleJson
     public string CargoCapacity { get; set; } = string.Empty;
     public string Consumables { get; set; } = string.Empty;
     public string Class { get; set; } = string.Empty;
-    public IEnumerable<ResponseMovieSimplifiedJson> Movies { get; set; } = [];
+    public List<ResponseMovieSimplifiedJson> Movies { get; set; }
 }
