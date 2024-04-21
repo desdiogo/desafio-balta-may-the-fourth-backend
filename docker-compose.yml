@@ -1,0 +1,27 @@
+﻿version: '3.7'
+
+services:
+  postgres:
+    image: bitnami/postgresql:latest
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=may-the-fourth
+    volumes:
+      - postgres_data:/bitnami/postgresql
+      - ./create.sql:/docker-entrypoint-initdb.d/init.sql
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "docker@docker.com"
+      PGADMIN_DEFAULT_PASSWORD: "docker"
+    ports:
+      - '5555:80'
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:
