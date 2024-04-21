@@ -17,4 +17,16 @@ public class PlanetController : ControllerBase
     
         return Ok(response);
     }
+    
+    [HttpGet]
+    [Route("{id}")]
+    [ProducesResponseType(typeof(ResponsePlanetJson), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
+    public IActionResult ListPlanetById([FromRoute] ushort id)
+    {
+        var useCase = new GetPlanetByIdUseCase();
+        var response = useCase.Execute(id);
+
+        return Ok(response);
+    }
 }

@@ -10,23 +10,26 @@ public class GetAllPlanetsUseCase
     public ResponseAllPlanetsJson Execute()
     {
         var planets = _dbContext.Planets;
-        
+
         return new ResponseAllPlanetsJson
         {
             Planets = planets.Select(planet =>
-            new ResponsePlanetJson{
-                Name = planet.Name,
-                RotationPeriod = planet.RotationPeriod,
-                OrbitalPeriod = planet.OrbitalPeriod,
-                Diameter = planet.Diameter,
-                Climate = planet.Climate,
-                Gravity = planet.Gravity,
-                Terrain = planet.Terrain,
-                SurfaceWater =  planet.SurfaceWater,
-                Population = planet.Population,
-                Characters = planet.Characters.Select(character => new ResponseCharacterSimplifiedJson { Id = character.Id, Name = character.Name }),
-                Movies = planet.Movies.Select(movie => new ResponseMovieSimplifiedJson() { Id = movie.Id,Title = movie.Title })
-            }).ToList()
+                new ResponsePlanetJson
+                {
+                    Name = planet.Name,
+                    RotationPeriod = planet.RotationPeriod,
+                    OrbitalPeriod = planet.OrbitalPeriod,
+                    Diameter = planet.Diameter,
+                    Climate = planet.Climate,
+                    Gravity = planet.Gravity,
+                    Terrain = planet.Terrain,
+                    SurfaceWater = planet.SurfaceWater,
+                    Population = planet.Population,
+                    Characters = planet.Characters.Select(character => new ResponseCharacterSimplifiedJson
+                        { Id = character.Id, Name = character.Name }).ToList(),
+                    Movies = planet.Movies.Select(movie => new ResponseMovieSimplifiedJson()
+                        { Id = movie.Id, Title = movie.Title }).ToList()
+                }).ToList()
         };
     }
 }

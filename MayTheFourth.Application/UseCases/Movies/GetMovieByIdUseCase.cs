@@ -9,7 +9,7 @@ public class GetMovieByIdUseCase
 {
     private readonly MayTheFourthDbContext _dbContext = new();
 
-    public ResponseMovieJson Execute(int id)
+    public ResponseMovieJson Execute(ushort id)
     {
         var movie = _dbContext.Movies.Include(m => m.Characters)
             .Include(m => m.Planets)

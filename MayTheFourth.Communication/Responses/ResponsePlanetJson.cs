@@ -11,6 +11,6 @@ public class ResponsePlanetJson
     public string Terrain { get; set; } = string.Empty;
     public string SurfaceWater { get; set; } = string.Empty;
     public string Population { get; set; } = string.Empty;
-    public IEnumerable<ResponseSimplifiedJson> Characters { get; set; } = [];
-    public IEnumerable<ResponseMovieSimplifiedJson> Movies { get; set; } = [];
+    public List<ResponseCharacterSimplifiedJson> Characters { get; set; }
+    public List<ResponseMovieSimplifiedJson> Movies { get; set; }
 }
