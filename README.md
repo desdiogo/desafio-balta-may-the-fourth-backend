@@ -31,7 +31,14 @@ Desenvolvimento de uma API completa, fornecendo recursos como criação, leitura
 * Muito conhecimento técnico
 
 ## 🧪 Como testar o projeto
-[DESCREVER COMO EXECUTAR O PROJETO]
+Para rodar o projeto localmente
+
+```sh
+docker compose up -d
+dotnet restore
+cd MayTheFourth.Api
+dotnet run
+```
 
 # 💜 Participe
 Quer participar dos próximos desafios? Junte-se a [maior comunidade .NET do Brasil 🇧🇷 💜](https://balta.io/discord)
