@@ -29,7 +29,7 @@ public class GetAllStarshipsUseCase
                 Consumables = starship.Consumables,
                 Class = starship.Class,
                 Movies = starship.Movies.Select(movie => new ResponseMovieSimplifiedJson()
-                    { Id = movie.Id, Title = movie.Title })
+                    { Id = movie.Id, Title = movie.Title }).ToList()
             }).ToList()
         };
     }

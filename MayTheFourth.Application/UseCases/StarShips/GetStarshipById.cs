@@ -14,7 +14,7 @@ public class GetStarshipById
         var starship = _dbContext.Starships
             .Include(s => s.Movies)
             .FirstOrDefault(ev => ev.Id.Equals(id));
-        
+
         if (starship is null)
             throw new NotFoundException("An starship with this id dont exist.");
 
@@ -34,7 +34,7 @@ public class GetStarshipById
             Consumables = starship.Consumables,
             Class = starship.Class,
             Movies = starship.Movies.Select(movie => new ResponseMovieSimplifiedJson()
-                { Id = movie.Id, Title = movie.Title })
+                { Id = movie.Id, Title = movie.Title }).ToList()
         };
     }
 }
