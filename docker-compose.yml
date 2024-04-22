@@ -1,4 +1,4 @@
-﻿version: '3.7'
+﻿version: '3.8'
 
 services:
   postgres:
@@ -8,21 +8,10 @@ services:
       - POSTGRES_USER=docker
       - POSTGRES_PASSWORD=docker
       - POSTGRES_DB=may-the-fourth
+    restart: always
     volumes:
       - postgres_data:/bitnami/postgresql
       - ./create.sql:/docker-entrypoint-initdb.d/init.sql
-    networks:
-      - mynet
-
-  pgadmin:
-    image: dpage/pgadmin4:latest
-    environment:
-      PGADMIN_DEFAULT_EMAIL: "docker@docker.com"
-      PGADMIN_DEFAULT_PASSWORD: "docker"
-    ports:
-      - '5555:80'
-    depends_on:
-      - postgres
     networks:
       - mynet
         
@@ -30,6 +19,7 @@ services:
     build:
       context: .
     container_name: maythefourthapi
+    restart: always
     depends_on:
       - postgres
     networks:
@@ -37,6 +27,8 @@ services:
         
   nginx:
     image: nginx:stable-alpine-slim
+    container_name: nginx
+    restart: always
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
       - ./certbot/www:/var/www/certbot/:ro
@@ -51,6 +43,7 @@ services:
     image: certbot/certbot:latest
     volumes:
       - ./certbot/www/:/var/www/certbot/:rw
+      - ./certbot/conf/:/etc/letsencrypt/:rw
 
 volumes:
   postgres_data:
