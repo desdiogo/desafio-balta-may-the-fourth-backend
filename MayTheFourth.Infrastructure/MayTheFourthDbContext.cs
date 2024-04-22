@@ -13,7 +13,7 @@ public class MayTheFourthDbContext: DbContext
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseNpgsql("Host=127.0.0.1:5432;Database=MayTheFourth;Username=docker;Password=docker");;
+        optionsBuilder.UseNpgsql("User ID=docker;Password=docker;Server=postgres;Port=5432;Database=may-the-fourth;");
     }
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
