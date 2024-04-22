@@ -8,7 +8,7 @@ services:
       - POSTGRES_USER=docker
       - POSTGRES_PASSWORD=docker
       - POSTGRES_DB=may-the-fourth
-    restart: always
+    restart: unless-stopped
     volumes:
       - postgres_data:/bitnami/postgresql
       - ./create.sql:/docker-entrypoint-initdb.d/init.sql
@@ -19,7 +19,7 @@ services:
     build:
       context: .
     container_name: maythefourthapi
-    restart: always
+    restart: unless-stopped
     depends_on:
       - postgres
     networks:
@@ -28,7 +28,7 @@ services:
   nginx:
     image: nginx:stable-alpine-slim
     container_name: nginx
-    restart: always
+    restart: unless-stopped
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
       - ./certbot/conf:/etc/letsencrypt
@@ -46,7 +46,7 @@ services:
     volumes:
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
-    command: certonly --webroot -w /var/www/certbot --keep-until-expiring --email diogo@desdiogo.com.br -d backend.desdiogo.com.br --agree-tos
+    command: certonly --webroot -w /var/www/certbot --keep-until-expiring --email diogo@desdiogo.com.br -d desafio-balta.desdiogo.com.br --agree-tos
 
 volumes:
   postgres_data:
