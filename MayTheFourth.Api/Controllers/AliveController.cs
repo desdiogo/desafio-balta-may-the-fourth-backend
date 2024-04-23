@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MayTheFourth.Api.Controllers;
 
-[Route("api[controller]")]
+[Route("[controller]")]
 public class AliveController : ControllerBase
 {
     [HttpGet]
