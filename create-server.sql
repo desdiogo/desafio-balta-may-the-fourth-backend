@@ -1,15 +1,14 @@
 CREATE TABLE "Movies"
 (
-    "Id"           SERIAL PRIMARY KEY,
-    "Title"        VARCHAR(255) NOT NULL,
-    "Episode"      SMALLINT     NOT NULL,
-    "OpeningCrawl" TEXT,
-    "Director"     VARCHAR(100) NOT NULL,
-    "Producer"     VARCHAR(100) NOT NULL,
-    "ReleaseDate"  DATE         NOT NULL
+    "Id"          INT PRIMARY KEY NOT NULL,
+    "Title"       VARCHAR(255)    NOT NULL,
+    "Episode"     INT             NOT NULL,
+    OpeningCrawl  NVARCHAR(max)   NOT NULL,
+    "Director"    VARCHAR(100)    NOT NULL,
+    "Producer"    VARCHAR(100)    NOT NULL,
+    "ReleaseDate" DATE            NOT NULL
 );
 
--- Inserir os dados do filme "A New Hope"
 INSERT INTO "Movies" ("Id", "Title", "Episode", "OpeningCrawl", "Director", "Producer", "ReleaseDate")
 VALUES (1, 'A New Hope', 4,
         'It is a period of civil war.\r\nRebel spaceships, striking\r\nfrom a hidden base, have won\r\ntheir first victory against\r\nthe evil Galactic Empire.\r\n\r\nDuring the battle, Rebel\r\nspies managed to steal secret\r\nplans to the Empire''s\r\nultimate weapon, the DEATH\r\nSTAR, an armored space\r\nstation with enough power\r\nto destroy an entire planet.\r\n\r\nPursued by the Empire''s\r\nsinister agents, Princess\r\nLeia races home aboard her\r\nstarship, custodian of the\r\nstolen plans that can save her\r\npeople and restore\r\nfreedom to the galaxy....',
@@ -45,19 +44,18 @@ VALUES (6, 'Revenge of the Sith', 3,
         'War! The Republic is crumbling\r\nunder attacks by the ruthless\r\nSith Lord, Count Dooku.\r\nThere are heroes on both sides.\r\nEvil is everywhere.\r\n\r\nIn a stunning move, the\r\nfiendish droid leader, General\r\nGrievous, has swept into the\r\nRepublic capital and kidnapped\r\nChancellor Palpatine, leader of\r\nthe Galactic Senate.\r\n\r\nAs the Separatist Droid Army\r\nattempts to flee the besieged\r\ncapital with their valuable\r\nhostage, two Jedi Knights lead a\r\ndesperate mission to rescue the\r\ncaptive Chancellor....',
         'George Lucas', 'Rick McCallum', '2005-05-19');
 
-
 CREATE TABLE "Planets"
 (
-    "Id"             SERIAL PRIMARY KEY,
-    "Name"           VARCHAR(255) NOT NULL,
-    "RotationPeriod" VARCHAR(255),
-    "OrbitalPeriod"  VARCHAR(255),
-    "Diameter"       VARCHAR(255),
-    "Climate"        VARCHAR(255),
-    "Gravity"        VARCHAR(255),
-    "Terrain"        VARCHAR(255),
-    "SurfaceWater"   VARCHAR(255),
-    "Population"     VARCHAR(255)
+    "Id"             INT PRIMARY KEY NOT NULL,
+    "Name"           VARCHAR(255)    NOT NULL,
+    "RotationPeriod" VARCHAR(255)    NOT NULL,
+    "OrbitalPeriod"  VARCHAR(255)    NOT NULL,
+    "Diameter"       VARCHAR(255)    NOT NULL,
+    "Climate"        VARCHAR(255)    NOT NULL,
+    "Gravity"        VARCHAR(255)    NOT NULL,
+    "Terrain"        VARCHAR(255)    NOT NULL,
+    "SurfaceWater"   VARCHAR(255)    NOT NULL,
+    "Population"     VARCHAR(255)    NOT NULL,
 );
 
 INSERT INTO "Planets" ("Id", "Name", "RotationPeriod", "OrbitalPeriod", "Diameter", "Climate", "Gravity", "Terrain",
@@ -332,16 +330,16 @@ VALUES (60, 'Umbara', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'un
 
 CREATE TABLE "Characters"
 (
-    "Id"        SERIAL PRIMARY KEY,
-    "Name"      VARCHAR(255) NOT NULL,
-    "Height"    VARCHAR(50),
-    "Weight"    VARCHAR(50),
-    "HairColor" VARCHAR(50),
-    "SkinColor" VARCHAR(50),
-    "EyeColor"  VARCHAR(50),
-    "BirthYear" VARCHAR(50),
-    "Gender"    VARCHAR(50),
-    "PlanetId"  SMALLINT,
+    "Id"        INT PRIMARY KEY NOT NULL,
+    "Name"      VARCHAR(255)    NOT NULL,
+    "Height"    VARCHAR(50)     NOT NULL,
+    "Weight"    VARCHAR(50)     NOT NULL,
+    "HairColor" VARCHAR(50)     NOT NULL,
+    "SkinColor" VARCHAR(50)     NOT NULL,
+    "EyeColor"  VARCHAR(50)     NOT NULL,
+    "BirthYear" VARCHAR(50)     NOT NULL,
+    "Gender"    VARCHAR(50)     NOT NULL,
+    "PlanetId"  INT,
     FOREIGN KEY ("PlanetId") REFERENCES "Planets" ("Id")
 );
 
@@ -674,21 +672,25 @@ INSERT INTO "Characters" ("Id", "Name", "Height", "Weight", "HairColor", "SkinCo
                           "PlanetId")
 VALUES (83, 'Tion Medon', '206', '80', 'none', 'grey', 'black', 'unknown', 'male', 12);
 
+INSERT INTO "Characters" ("Id", "Name", "Height", "Weight", "HairColor", "SkinColor", "EyeColor", "BirthYear", "Gender",
+                          "PlanetId")
+VALUES (64, 'Luminara Unduli', '170', '56.2', 'black', 'yellow', 'blue', '58BBY', 'female', 51);
+
 
 CREATE TABLE "Vehicles"
 (
-    "Id"            SERIAL PRIMARY KEY,
-    "Name"          VARCHAR(255) NOT NULL,
-    "Model"         VARCHAR(255),
-    "Manufacturer"  VARCHAR(255),
-    "CostInCredits" VARCHAR(50),
-    "Length"        VARCHAR(50),
-    "MaxSpeed"      VARCHAR(50),
-    "Crew"          VARCHAR(50),
-    "Passengers"    VARCHAR(50),
-    "CargoCapacity" VARCHAR(50),
-    "Consumables"   VARCHAR(50),
-    "Class"         VARCHAR(50)
+    "Id"            INT PRIMARY KEY NOT NULL,
+    "Name"          VARCHAR(255)    NOT NULL,
+    "Model"         VARCHAR(255)    NOT NULL,
+    "Manufacturer"  VARCHAR(255)    NOT NULL,
+    "CostInCredits" VARCHAR(50)     NOT NULL,
+    "Length"        VARCHAR(50)     NOT NULL,
+    "MaxSpeed"      VARCHAR(50)     NOT NULL,
+    "Crew"          VARCHAR(50)     NOT NULL,
+    "Passengers"    VARCHAR(50)     NOT NULL,
+    "CargoCapacity" VARCHAR(50)     NOT NULL,
+    "Consumables"   VARCHAR(50)     NOT NULL,
+    "Class"         VARCHAR(50)     NOT NULL
 );
 
 INSERT INTO "Vehicles" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew",
@@ -888,20 +890,20 @@ VALUES (76, 'AT-RT', 'All Terrain Recon Transport', 'Kuat Drive Yards', '40000',
 
 CREATE TABLE "Starships"
 (
-    "Id"               SERIAL PRIMARY KEY,
-    "Name"             VARCHAR(255) NOT NULL,
-    "Model"            VARCHAR(255),
-    "Manufacturer"     VARCHAR(255),
-    "CostInCredits"    VARCHAR(50),
-    "Length"           VARCHAR(50),
-    "MaxSpeed"         VARCHAR(50),
-    "Crew"             VARCHAR(50),
-    "Passengers"       VARCHAR(50),
-    "CargoCapacity"    VARCHAR(50),
-    "HyperdriveRating" VARCHAR(50),
-    "Mglt"             VARCHAR(50),
-    "Consumables"      VARCHAR(50),
-    "Class"            VARCHAR(50)
+    "Id"               INT PRIMARY KEY NOT NULL,
+    "Name"             VARCHAR(255)    NOT NULL,
+    "Model"            VARCHAR(255)    NOT NULL,
+    "Manufacturer"     VARCHAR(255)    NOT NULL,
+    "CostInCredits"    VARCHAR(50)     NOT NULL,
+    "Length"           VARCHAR(50)     NOT NULL,
+    "MaxSpeed"         VARCHAR(50)     NOT NULL,
+    "Crew"             VARCHAR(50)     NOT NULL,
+    "Passengers"       VARCHAR(50)     NOT NULL,
+    "CargoCapacity"    VARCHAR(50)     NOT NULL,
+    "HyperdriveRating" VARCHAR(50)     NOT NULL,
+    "Mglt"             VARCHAR(50)     NOT NULL,
+    "Consumables"      VARCHAR(50)     NOT NULL,
+    "Class"            VARCHAR(50)     NOT NULL
 );
 
 INSERT INTO "Starships" ("Id", "Name", "Model", "Manufacturer", "CostInCredits", "Length", "MaxSpeed", "Crew",
@@ -1093,8 +1095,8 @@ VALUES (75, 'V-wing', 'Alpha-3 Nimbus-class V-wing starfighter', 'Kuat Systems E
 
 CREATE TABLE "CharacterMovie"
 (
-    "MoviesId"     SMALLINT REFERENCES "Movies" ("Id"),
-    "CharactersId" SMALLINT REFERENCES "Characters" ("Id")
+    "MoviesId"     INT REFERENCES "Movies" ("Id"),
+    "CharactersId" INT REFERENCES "Characters" ("Id")
 );
 
 INSERT INTO "CharacterMovie" ("MoviesId", "CharactersId")
@@ -1585,8 +1587,8 @@ VALUES (6, 83);
 
 CREATE TABLE "MoviePlanet"
 (
-    "MoviesId"  SMALLINT REFERENCES "Movies" ("Id"),
-    "PlanetsId" SMALLINT REFERENCES "Planets" ("Id")
+    "MoviesId"  INT REFERENCES "Movies" ("Id"),
+    "PlanetsId" INT REFERENCES "Planets" ("Id")
 );
 
 INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
@@ -1691,8 +1693,8 @@ VALUES (6, 19);
 
 CREATE TABLE "MovieVehicle"
 (
-    "MoviesId"   SMALLINT REFERENCES "Movies" ("Id"),
-    "VehiclesId" SMALLINT REFERENCES "Vehicles" ("Id")
+    "MoviesId"   INT REFERENCES "Movies" ("Id"),
+    "VehiclesId" INT REFERENCES "Vehicles" ("Id")
 );
 
 INSERT INTO "MovieVehicle" ("MoviesId", "VehiclesId")
@@ -1844,8 +1846,8 @@ VALUES (6, 76);
 
 CREATE TABLE "MovieStarship"
 (
-    "MoviesId"    SMALLINT REFERENCES "Movies" ("Id"),
-    "StarshipsId" SMALLINT REFERENCES "Starships" ("Id")
+    "MoviesId"    INT REFERENCES "Movies" ("Id"),
+    "StarshipsId" INT REFERENCES "Starships" ("Id")
 );
 
 INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
@@ -2012,13 +2014,6 @@ VALUES (6, 74);
 
 INSERT INTO "MovieStarship" ("MoviesId", "StarshipsId")
 VALUES (6, 75);
-
-CREATE INDEX idx_characters_id_name ON "Characters" ("Id", "Name");
-CREATE INDEX idx_planets_id_name ON "Planets" ("Id", "Name");
-CREATE INDEX idx_vehicles_id_name ON "Vehicles" ("Id", "Name");
-CREATE INDEX idx_starships_id_name ON "Starships" ("Id", "Name");
-
-
 
 
 

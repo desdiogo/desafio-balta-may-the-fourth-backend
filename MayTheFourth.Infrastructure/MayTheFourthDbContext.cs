@@ -1,9 +1,11 @@
 ﻿using MayTheFourth.Infrastructure.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+
 
 namespace MayTheFourth.Infrastructure;
 
-public class MayTheFourthDbContext: DbContext
+public class MayTheFourthDbContext(): DbContext
 {
     public DbSet<Character> Characters { get; set; }
     public DbSet<Movie> Movies { get; set; }
@@ -13,7 +15,8 @@ public class MayTheFourthDbContext: DbContext
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseNpgsql("User ID=docker;Password=docker;Server=postgres;Port=5432;Database=may-the-fourth;");
+        var config = GetConfig();
+        optionsBuilder.UseNpgsql(config["ConnectionString"]);
     }
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -39,5 +42,12 @@ public class MayTheFourthDbContext: DbContext
         modelBuilder.Entity<Movie>()
             .HasMany(e => e.Starships)
             .WithMany(e => e.Movies);
+    }
+
+    private static IConfigurationRoot GetConfig()
+    {
+        return new ConfigurationBuilder()
+            .AddUserSecrets<MayTheFourthDbContext>()
+            .Build();
     }
 }
