@@ -2017,6 +2017,7 @@ CREATE INDEX idx_characters_id_name ON "Characters" ("Id", "Name");
 CREATE INDEX idx_planets_id_name ON "Planets" ("Id", "Name");
 CREATE INDEX idx_vehicles_id_name ON "Vehicles" ("Id", "Name");
 CREATE INDEX idx_starships_id_name ON "Starships" ("Id", "Name");
+CREATE INDEX idx_movies_id_title ON "Movies" ("Id", "Title");
 
 
 
