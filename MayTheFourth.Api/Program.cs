@@ -13,16 +13,16 @@ builder.Services.Configure<RouteOptions>(options => { options.LowercaseUrls = tr
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapGet("/", async context => await Task.Run(() =>
+    context.Response.Redirect("/swagger/index.html")));
 
 app.Run();
