@@ -22,6 +22,7 @@ public class GetMovieByIdUseCase
 
         return new ResponseMovieJson
         {
+            Id = movie.Id,
             Title = movie.Title,
             Episode = movie.Episode,
             OpeningCrawl = movie.OpeningCrawl,

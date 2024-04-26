@@ -2,6 +2,7 @@
 
 public class ResponseCharacterJson
 {
+    public ushort Id { get; set; }
     public string Name { get; set; } = string.Empty;
     public string Height { get; set; } = string.Empty;
     public string Weight { get; set; } = string.Empty;

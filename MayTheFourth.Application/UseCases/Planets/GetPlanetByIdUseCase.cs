@@ -21,6 +21,7 @@ public class GetPlanetByIdUseCase
 
         return new ResponsePlanetJson
         {
+            Id = planet.Id,
             Name = planet.Name,
             RotationPeriod = planet.RotationPeriod,
             OrbitalPeriod = planet.OrbitalPeriod,

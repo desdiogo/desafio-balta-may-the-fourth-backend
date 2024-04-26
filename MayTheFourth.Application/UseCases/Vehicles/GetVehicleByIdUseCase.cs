@@ -20,6 +20,7 @@ public class GetVehicleByIdUseCase
 
         return new ResponseVehicleJson
         {
+            Id = vehicle.Id,
             Name = vehicle.Name,
             Model = vehicle.Model,
             Manufacturer = vehicle.Manufacturer,

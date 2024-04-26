@@ -14,21 +14,23 @@ public class GetAllVehiclesUseCase
         return new ResponseAllVehiclesJson
         {
             Vehicles = vehicles.Select(vehicle =>
-            new ResponseVehicleJson {
-                Name = vehicle.Name,
-                Model = vehicle.Model,
-                Manufacturer = vehicle.Manufacturer,
-                CostInCredits = vehicle.CostInCredits,
-                Length = vehicle.Length,
-                MaxSpeed = vehicle.MaxSpeed,
-                Crew = vehicle.Crew,
-                Passengers = vehicle.Passengers,
-                CargoCapacity = vehicle.CargoCapacity,
-                Consumables = vehicle.Consumables,
-                Class = vehicle.Class,
-                Movies = vehicle.Movies.Select(movie => new ResponseMovieSimplifiedJson()
-                    { Id = movie.Id, Title = movie.Title }).ToList()
-            }).ToList()
+                new ResponseVehicleJson
+                {
+                    Id = vehicle.Id,
+                    Name = vehicle.Name,
+                    Model = vehicle.Model,
+                    Manufacturer = vehicle.Manufacturer,
+                    CostInCredits = vehicle.CostInCredits,
+                    Length = vehicle.Length,
+                    MaxSpeed = vehicle.MaxSpeed,
+                    Crew = vehicle.Crew,
+                    Passengers = vehicle.Passengers,
+                    CargoCapacity = vehicle.CargoCapacity,
+                    Consumables = vehicle.Consumables,
+                    Class = vehicle.Class,
+                    Movies = vehicle.Movies.Select(movie => new ResponseMovieSimplifiedJson()
+                        { Id = movie.Id, Title = movie.Title }).ToList()
+                }).ToList()
         };
     }
 }

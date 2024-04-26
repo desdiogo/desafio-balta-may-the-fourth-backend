@@ -1,4 +1,4 @@
-CREATE TABLE "Movies"
+CREATE TABLE IF NOT EXISTS "Movies"
 (
     "Id"           SERIAL PRIMARY KEY,
     "Title"        VARCHAR(255) NOT NULL,
@@ -46,7 +46,7 @@ VALUES (6, 'Revenge of the Sith', 3,
         'George Lucas', 'Rick McCallum', '2005-05-19');
 
 
-CREATE TABLE "Planets"
+CREATE TABLE IF NOT EXISTS "Planets"
 (
     "Id"             SERIAL PRIMARY KEY,
     "Name"           VARCHAR(255) NOT NULL,
@@ -330,7 +330,7 @@ INSERT INTO "Planets" ("Id", "Name", "RotationPeriod", "OrbitalPeriod", "Diamete
 VALUES (60, 'Umbara', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown');
 
 
-CREATE TABLE "Characters"
+CREATE TABLE IF NOT EXISTS "Characters"
 (
     "Id"        SERIAL PRIMARY KEY,
     "Name"      VARCHAR(255) NOT NULL,
@@ -675,7 +675,7 @@ INSERT INTO "Characters" ("Id", "Name", "Height", "Weight", "HairColor", "SkinCo
 VALUES (83, 'Tion Medon', '206', '80', 'none', 'grey', 'black', 'unknown', 'male', 12);
 
 
-CREATE TABLE "Vehicles"
+CREATE TABLE IF NOT EXISTS "Vehicles"
 (
     "Id"            SERIAL PRIMARY KEY,
     "Name"          VARCHAR(255) NOT NULL,
@@ -886,7 +886,7 @@ VALUES (76, 'AT-RT', 'All Terrain Recon Transport', 'Kuat Drive Yards', '40000',
         'walker');
 
 
-CREATE TABLE "Starships"
+CREATE TABLE IF NOT EXISTS "Starships"
 (
     "Id"               SERIAL PRIMARY KEY,
     "Name"             VARCHAR(255) NOT NULL,
@@ -1091,7 +1091,7 @@ VALUES (75, 'V-wing', 'Alpha-3 Nimbus-class V-wing starfighter', 'Kuat Systems E
         '1', '0', '60', '1.0', 'unknown', '15 hours', 'starfighter');
 
 
-CREATE TABLE "CharacterMovie"
+CREATE TABLE IF NOT EXISTS "CharacterMovie"
 (
     "MoviesId"     SMALLINT REFERENCES "Movies" ("Id"),
     "CharactersId" SMALLINT REFERENCES "Characters" ("Id")
@@ -1583,7 +1583,7 @@ VALUES (6, 82);
 INSERT INTO "CharacterMovie" ("MoviesId", "CharactersId")
 VALUES (6, 83);
 
-CREATE TABLE "MoviePlanet"
+CREATE TABLE IF NOT EXISTS "MoviePlanet"
 (
     "MoviesId"  SMALLINT REFERENCES "Movies" ("Id"),
     "PlanetsId" SMALLINT REFERENCES "Planets" ("Id")
@@ -1689,7 +1689,7 @@ INSERT INTO "MoviePlanet" ("MoviesId", "PlanetsId")
 VALUES (6, 19);
 
 
-CREATE TABLE "MovieVehicle"
+CREATE TABLE IF NOT EXISTS "MovieVehicle"
 (
     "MoviesId"   SMALLINT REFERENCES "Movies" ("Id"),
     "VehiclesId" SMALLINT REFERENCES "Vehicles" ("Id")
@@ -1842,7 +1842,7 @@ VALUES (6, 73);
 INSERT INTO "MovieVehicle" ("MoviesId", "VehiclesId")
 VALUES (6, 76);
 
-CREATE TABLE "MovieStarship"
+CREATE TABLE IF NOT EXISTS "MovieStarship"
 (
     "MoviesId"    SMALLINT REFERENCES "Movies" ("Id"),
     "StarshipsId" SMALLINT REFERENCES "Starships" ("Id")

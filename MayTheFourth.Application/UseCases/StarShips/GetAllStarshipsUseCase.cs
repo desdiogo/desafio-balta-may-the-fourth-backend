@@ -14,23 +14,25 @@ public class GetAllStarshipsUseCase
         return new ResponseAllStarshipJson
         {
             Starships = starships.Select(starship =>
-            new ResponseStarshipJson {
-                Name = starship.Name,
-                Model = starship.Model,
-                Manufacturer = starship.Manufacturer,
-                CostInCredits = starship.CostInCredits,
-                Length = starship.Length,
-                MaxSpeed = starship.MaxSpeed,
-                Crew = starship.Crew,
-                Passengers = starship.Passengers,
-                CargoCapacity = starship.CargoCapacity,
-                HyperdriveRating = starship.HyperdriveRating,
-                Mglt = starship.Mglt,
-                Consumables = starship.Consumables,
-                Class = starship.Class,
-                Movies = starship.Movies.Select(movie => new ResponseMovieSimplifiedJson()
-                    { Id = movie.Id, Title = movie.Title }).ToList()
-            }).ToList()
+                new ResponseStarshipJson
+                {
+                    Id = starship.Id,
+                    Name = starship.Name,
+                    Model = starship.Model,
+                    Manufacturer = starship.Manufacturer,
+                    CostInCredits = starship.CostInCredits,
+                    Length = starship.Length,
+                    MaxSpeed = starship.MaxSpeed,
+                    Crew = starship.Crew,
+                    Passengers = starship.Passengers,
+                    CargoCapacity = starship.CargoCapacity,
+                    HyperdriveRating = starship.HyperdriveRating,
+                    Mglt = starship.Mglt,
+                    Consumables = starship.Consumables,
+                    Class = starship.Class,
+                    Movies = starship.Movies.Select(movie => new ResponseMovieSimplifiedJson()
+                        { Id = movie.Id, Title = movie.Title }).ToList()
+                }).ToList()
         };
     }
 }

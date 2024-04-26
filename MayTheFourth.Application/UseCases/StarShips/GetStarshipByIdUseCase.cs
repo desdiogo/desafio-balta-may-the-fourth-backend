@@ -20,6 +20,7 @@ public class GetStarshipByIdUseCase
 
         return new ResponseStarshipJson
         {
+            Id = starship.Id,
             Name = starship.Name,
             Model = starship.Model,
             Manufacturer = starship.Manufacturer,

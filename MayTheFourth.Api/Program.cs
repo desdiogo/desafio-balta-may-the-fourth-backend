@@ -1,4 +1,5 @@
 using MayTheFourth.Api.Filters;
+using MayTheFourth.Infrastructure.Caching;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,13 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));
 
 builder.Services.Configure<RouteOptions>(options => { options.LowercaseUrls = true; });
+
+builder.Services.AddScoped<ICachingService, CachingService>();
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.InstanceName = "api";
+    options.Configuration = "localhost:6379";
+});
 
 var app = builder.Build();
 

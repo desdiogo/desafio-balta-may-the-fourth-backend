@@ -16,6 +16,7 @@ public class GetAllCharactersUseCase
             Characters = characters.Select(character =>
                 new ResponseCharacterJson
                 {
+                    Id = character.Id,
                     Name = character.Name,
                     Height = character.Height,
                     Weight = character.Weight,
