@@ -1,19 +1,20 @@
 using MayTheFourth.Application.UseCases.Planets;
 using MayTheFourth.Communication.Responses;
+using MayTheFourth.Infrastructure.Caching;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MayTheFourth.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class PlanetController : ControllerBase
+public class PlanetController(ICachingService cache) : ControllerBase
 {
     [HttpGet]
     [ProducesResponseType(typeof(ResponseAllPlanetsJson), StatusCodes.Status200OK)]
-    public IActionResult ListAllPlanets()
+    public async Task<IActionResult> ListAllPlanets()
     {
-        var useCase = new GetAllPlanetsUseCase();
-        var response = useCase.Execute();
+        var useCase = new GetAllPlanetsUseCase(cache);
+        var response = await useCase.Execute();
     
         return Ok(response);
     }
@@ -22,10 +23,10 @@ public class PlanetController : ControllerBase
     [Route("{id}")]
     [ProducesResponseType(typeof(ResponsePlanetJson), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
-    public IActionResult ListPlanetById([FromRoute] ushort id)
+    public async Task<IActionResult> ListPlanetById([FromRoute] ushort id)
     {
-        var useCase = new GetPlanetByIdUseCase();
-        var response = useCase.Execute(id);
+        var useCase = new GetPlanetByIdUseCase(cache);
+        var response = await useCase.Execute(id);
 
         return Ok(response);
     }

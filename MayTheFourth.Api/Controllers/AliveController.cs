@@ -1,4 +1,5 @@
 ﻿using MayTheFourth.Communication.Responses;
+using MayTheFourth.Enum;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MayTheFourth.Api.Controllers;
@@ -7,13 +8,11 @@ namespace MayTheFourth.Api.Controllers;
 public class AliveController : ControllerBase
 {
     [HttpGet]
+    [ProducesResponseType(typeof(ResponseSucessJson), StatusCodes.Status200OK)]
     public IActionResult Alive()
     {
-        var response = new ResponseAliveJson
-        {
-            Message = "Is alive"
-        };
-        
+        var response = new ResponseSucessJson(ResponseMessage.IsAlive);
+
         return Ok(response);
     }
 }

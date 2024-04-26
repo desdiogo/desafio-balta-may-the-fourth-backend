@@ -11,10 +11,10 @@ public class CharacterController(ICachingService cache) : ControllerBase
 {
     [HttpGet]
     [ProducesResponseType(typeof(ResponseAllPlanetsJson), StatusCodes.Status200OK)]
-    public IActionResult ListAllCharacters()
+    public async Task<IActionResult> ListAllCharacters()
     {
-        var useCase = new GetAllCharactersUseCase();
-        var response = useCase.Execute();
+        var useCase = new GetAllCharactersUseCase(cache);
+        var response = await useCase.Execute();
     
         return Ok(response);
     }

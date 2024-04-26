@@ -1,38 +1,39 @@
-﻿using MayTheFourth.Communication.Responses;
+﻿using System.Text.Json;
+using MayTheFourth.Communication.Responses;
+using MayTheFourth.Enum;
 using MayTheFourth.Infrastructure;
+using MayTheFourth.Infrastructure.Caching;
+using Microsoft.EntityFrameworkCore;
 
 namespace MayTheFourth.Application.UseCases.Starships;
 
-public class GetAllStarshipsUseCase
+public class GetAllStarshipsUseCase(ICachingService cache): StarshipUseCase
 {
     private readonly MayTheFourthDbContext _dbContext = new();
 
-    public ResponseAllStarshipJson Execute()
+    public async Task<ResponseAllStarshipJson> Execute()
     {
-        var starships = _dbContext.Starships;
-
-        return new ResponseAllStarshipJson
+        var key = GetKeyCache(CacheKey.Starships);
+        var responseCache = await cache.GetAsync(key);
+        
+        ResponseAllStarshipJson? response;
+        
+        if (string.IsNullOrWhiteSpace(responseCache) == false)
         {
-            Starships = starships.Select(starship =>
-                new ResponseStarshipJson
-                {
-                    Id = starship.Id,
-                    Name = starship.Name,
-                    Model = starship.Model,
-                    Manufacturer = starship.Manufacturer,
-                    CostInCredits = starship.CostInCredits,
-                    Length = starship.Length,
-                    MaxSpeed = starship.MaxSpeed,
-                    Crew = starship.Crew,
-                    Passengers = starship.Passengers,
-                    CargoCapacity = starship.CargoCapacity,
-                    HyperdriveRating = starship.HyperdriveRating,
-                    Mglt = starship.Mglt,
-                    Consumables = starship.Consumables,
-                    Class = starship.Class,
-                    Movies = starship.Movies.Select(movie => new ResponseMovieSimplifiedJson()
-                        { Id = movie.Id, Title = movie.Title }).ToList()
-                }).ToList()
+            response = JsonSerializer.Deserialize<ResponseAllStarshipJson>(responseCache);
+
+            return response!;
+        }
+        
+        var starships = _dbContext.Starships
+            .Include(s => s.Movies);
+
+        response = new ResponseAllStarshipJson
+        {
+            Starships = starships.Select(starship => GetResponseStarshipJson(starship)).ToList()
         };
+
+        await cache.SetAsync(key, JsonSerializer.Serialize(response));
+        return response;
     }
 }

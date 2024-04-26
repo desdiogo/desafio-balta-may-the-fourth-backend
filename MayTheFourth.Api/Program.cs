@@ -1,4 +1,5 @@
 using MayTheFourth.Api.Filters;
+using MayTheFourth.Api.Middlewares;
 using MayTheFourth.Infrastructure.Caching;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,8 +30,9 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
 app.MapGet("/", async context => await Task.Run(() =>
     context.Response.Redirect("/swagger/index.html")));
+
+app.UseMiddleware(typeof(NotFoundMiddleware));
 
 app.Run();
