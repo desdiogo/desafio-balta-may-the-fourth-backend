@@ -2,6 +2,7 @@
 
 public class ResponsePlanetJson
 {
+    public ushort Id { get; set; }
     public string Name { get; set; } = string.Empty;
     public string RotationPeriod { get; set; } = string.Empty;
     public string OrbitalPeriod { get; set; } = string.Empty;

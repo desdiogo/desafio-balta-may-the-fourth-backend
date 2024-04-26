@@ -1,35 +1,41 @@
-﻿using MayTheFourth.Communication.Responses;
+﻿using System.Text.Json;
+using MayTheFourth.Communication.Responses;
+using MayTheFourth.Enum;
 using MayTheFourth.Infrastructure;
+using MayTheFourth.Infrastructure.Caching;
+using Microsoft.EntityFrameworkCore;
 
 namespace MayTheFourth.Application.UseCases.Planets;
 
-public class GetAllPlanetsUseCase
+public class GetAllPlanetsUseCase(ICachingService cache): PlanetUseCase
 {
     private readonly MayTheFourthDbContext _dbContext = new();
 
-    public ResponseAllPlanetsJson Execute()
+    public async Task<ResponseAllPlanetsJson> Execute()
     {
-        var planets = _dbContext.Planets;
-
-        return new ResponseAllPlanetsJson
+        var key = GetKeyCache(CacheKey.Planets);
+        var responseCache = await cache.GetAsync(key);
+        
+        ResponseAllPlanetsJson? response;
+        
+        if (string.IsNullOrWhiteSpace(responseCache) == false)
         {
-            Planets = planets.Select(planet =>
-                new ResponsePlanetJson
-                {
-                    Name = planet.Name,
-                    RotationPeriod = planet.RotationPeriod,
-                    OrbitalPeriod = planet.OrbitalPeriod,
-                    Diameter = planet.Diameter,
-                    Climate = planet.Climate,
-                    Gravity = planet.Gravity,
-                    Terrain = planet.Terrain,
-                    SurfaceWater = planet.SurfaceWater,
-                    Population = planet.Population,
-                    Characters = planet.Characters.Select(character => new ResponseCharacterSimplifiedJson
-                        { Id = character.Id, Name = character.Name }).ToList(),
-                    Movies = planet.Movies.Select(movie => new ResponseMovieSimplifiedJson()
-                        { Id = movie.Id, Title = movie.Title }).ToList()
-                }).ToList()
+            response = JsonSerializer.Deserialize<ResponseAllPlanetsJson>(responseCache);
+
+            return response!;
+        }
+
+        var planets = _dbContext.Planets
+            .Include(p => p.Characters)
+            .Include(p => p.Movies);
+        
+        response =  new ResponseAllPlanetsJson
+        {
+            Planets = planets.Select(planet => GetResponsePlanetJson(planet)).ToList()
         };
+        
+        
+        await cache.SetAsync(key, JsonSerializer.Serialize(response));
+        return response;
     }
 }

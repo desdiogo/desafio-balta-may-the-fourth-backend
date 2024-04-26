@@ -1,6 +1,5 @@
 ﻿namespace MayTheFourth.Communication.Responses;
 
-public class ResponseErrorJson(string message)
+public class ResponseErrorJson(string message): ResponseJson(message)
 {
-    public string Message { get; set; } = message;
 }

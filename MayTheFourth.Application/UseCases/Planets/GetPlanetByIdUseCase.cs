@@ -1,39 +1,42 @@
-﻿using MayTheFourth.Communication.Responses;
+﻿using System.Text.Json;
+using MayTheFourth.Communication.Responses;
+using MayTheFourth.Enum;
 using MayTheFourth.Exceptions;
 using MayTheFourth.Infrastructure;
+using MayTheFourth.Infrastructure.Caching;
 using Microsoft.EntityFrameworkCore;
 
 namespace MayTheFourth.Application.UseCases.Planets;
 
-public class GetPlanetByIdUseCase
+public class GetPlanetByIdUseCase(ICachingService cache): PlanetUseCase
 {
     private readonly MayTheFourthDbContext _dbContext = new();
 
-    public ResponsePlanetJson Execute(ushort id)
+    public async Task<ResponsePlanetJson> Execute(ushort id)
     {
-        var planet = _dbContext.Planets
+        var key = GetKeyCache(CacheKey.Planet, (short)id);
+        var responseCache = await cache.GetAsync(key);
+
+        ResponsePlanetJson? response;
+
+        if (string.IsNullOrWhiteSpace(responseCache) == false)
+        {
+            response = JsonSerializer.Deserialize<ResponsePlanetJson>(responseCache);
+
+            return response!;
+        }
+        
+        var planet = await _dbContext.Planets
             .Include(p => p.Movies)
             .Include(p => p.Characters)
-            .FirstOrDefault(s => s.Id.Equals(id));
+            .FirstOrDefaultAsync(s => s.Id.Equals(id));
 
         if (planet is null)
-            throw new NotFoundException("An planet with this id dont exist.");
+            throw new NotFoundException(ResponseMessage.PlanetDoesNotExist);
 
-        return new ResponsePlanetJson
-        {
-            Name = planet.Name,
-            RotationPeriod = planet.RotationPeriod,
-            OrbitalPeriod = planet.OrbitalPeriod,
-            Diameter = planet.Diameter,
-            Climate = planet.Climate,
-            Gravity = planet.Gravity,
-            Terrain = planet.Terrain,
-            SurfaceWater = planet.SurfaceWater,
-            Population = planet.Population,
-            Characters = planet.Characters.Select(character => new ResponseCharacterSimplifiedJson
-                { Id = character.Id, Name = character.Name }).ToList(),
-            Movies = planet.Movies.Select(movie => new ResponseMovieSimplifiedJson()
-                { Id = movie.Id, Title = movie.Title }).ToList()
-        };
+        response = GetResponsePlanetJson(planet);
+
+        await cache.SetAsync(key, JsonSerializer.Serialize(response));
+        return response;
     }
 }

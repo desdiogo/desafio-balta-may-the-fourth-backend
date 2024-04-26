@@ -35,7 +35,8 @@ public class ExceptionFilter : IExceptionFilter
     private static void ThrowUnknownError(ExceptionContext context)
     {
         context.HttpContext.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-        context.Result = new ObjectResult(new ResponseErrorJson("Unknown error"));
+        context.Result = new ObjectResult(new ResponseErrorJson(context.Exception.Message));
+        // context.Result = new ObjectResult(new ResponseErrorJson("Unknown error"));
     }
     
     private static void ThrowNotFoundException(ExceptionContext context)

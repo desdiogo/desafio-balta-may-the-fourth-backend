@@ -1,40 +1,41 @@
-﻿using MayTheFourth.Communication.Responses;
+﻿using System.Text.Json;
+using MayTheFourth.Communication.Responses;
+using MayTheFourth.Enum;
 using MayTheFourth.Exceptions;
 using MayTheFourth.Infrastructure;
+using MayTheFourth.Infrastructure.Caching;
 using Microsoft.EntityFrameworkCore;
 
 namespace MayTheFourth.Application.UseCases.Starships;
 
-public class GetStarshipByIdUseCase
+public class GetStarshipByIdUseCase(ICachingService cache): StarshipUseCase
 {
     private readonly MayTheFourthDbContext _dbContext = new();
 
-    public ResponseStarshipJson Execute(ushort id)
+    public async Task<ResponseStarshipJson> Execute(ushort id)
     {
-        var starship = _dbContext.Starships
+        var key = GetKeyCache(CacheKey.Starship, (short)id);
+        var responseCache = await cache.GetAsync(key);
+
+        ResponseStarshipJson? response;
+
+        if (string.IsNullOrWhiteSpace(responseCache) == false)
+        {
+            response = JsonSerializer.Deserialize<ResponseStarshipJson>(responseCache);
+
+            return response!;
+        }
+        
+        var starship = await _dbContext.Starships
             .Include(s => s.Movies)
-            .FirstOrDefault(ev => ev.Id.Equals(id));
+            .FirstOrDefaultAsync(ev => ev.Id.Equals(id));
 
         if (starship is null)
-            throw new NotFoundException("An starship with this id dont exist.");
+            throw new NotFoundException(ResponseMessage.StarshipDoesNotExist);
+        
+        response = GetResponseStarshipJson(starship);
 
-        return new ResponseStarshipJson
-        {
-            Name = starship.Name,
-            Model = starship.Model,
-            Manufacturer = starship.Manufacturer,
-            CostInCredits = starship.CostInCredits,
-            Length = starship.Length,
-            MaxSpeed = starship.MaxSpeed,
-            Crew = starship.Crew,
-            Passengers = starship.Passengers,
-            CargoCapacity = starship.CargoCapacity,
-            HyperdriveRating = starship.HyperdriveRating,
-            Mglt = starship.Mglt,
-            Consumables = starship.Consumables,
-            Class = starship.Class,
-            Movies = starship.Movies.Select(movie => new ResponseMovieSimplifiedJson()
-                { Id = movie.Id, Title = movie.Title }).ToList()
-        };
+        await cache.SetAsync(key, JsonSerializer.Serialize(response));
+        return response;
     }
 }

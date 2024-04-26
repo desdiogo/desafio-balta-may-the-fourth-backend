@@ -1,19 +1,20 @@
 using MayTheFourth.Application.UseCases.Vehicles;
 using MayTheFourth.Communication.Responses;
+using MayTheFourth.Infrastructure.Caching;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MayTheFourth.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class VehicleController : ControllerBase
+public class VehicleController(ICachingService cache) : ControllerBase
 {
     [HttpGet]
     [ProducesResponseType(typeof(ResponseAllVehiclesJson), StatusCodes.Status200OK)]
-    public IActionResult ListAllVehicles()
+    public async Task<IActionResult> ListAllVehicles()
     {
-        var useCase = new GetAllVehiclesUseCase();
-        var response = useCase.Execute();
+        var useCase = new GetAllVehiclesUseCase(cache);
+        var response = await useCase.Execute();
     
         return Ok(response);
     }
@@ -22,10 +23,10 @@ public class VehicleController : ControllerBase
     [Route("{id}")]
     [ProducesResponseType(typeof(ResponseVehicleJson), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
-    public IActionResult ListVehicleById([FromRoute] ushort id)
+    public async Task<IActionResult> ListVehicleById([FromRoute] ushort id)
     {
-        var useCase = new GetVehicleByIdUseCase();
-        var response = useCase.Execute(id);
+        var useCase = new GetVehicleByIdUseCase(cache);
+        var response = await useCase.Execute(id);
 
         return Ok(response);
     }

@@ -1,20 +1,21 @@
 using MayTheFourth.Application.UseCases.Movies;
 using MayTheFourth.Communication.Responses;
+using MayTheFourth.Infrastructure.Caching;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MayTheFourth.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class MovieController : ControllerBase
+public class MovieController(ICachingService cache) : ControllerBase
 {
     [HttpGet]
     [ProducesResponseType(typeof(ResponseAllMoviesJson), StatusCodes.Status200OK)]
-    public IActionResult ListAllMovies()
+    public async Task<IActionResult> ListAllMovies()
     {
 
-        var useCase = new GetAllMoviesUseCase();
-        var response = useCase.Execute();
+        var useCase = new GetAllMoviesUseCase(cache);
+        var response = await useCase.Execute();
         
         return Ok(response);
     }
@@ -23,10 +24,10 @@ public class MovieController : ControllerBase
     [Route("{id}")]
     [ProducesResponseType(typeof(ResponseMovieJson), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
-    public IActionResult ListMovieById([FromRoute] ushort id)
+    public async Task<IActionResult> ListMovieById([FromRoute] ushort id)
     {
-        var useCase = new GetMovieByIdUseCase();
-        var response = useCase.Execute(id);
+        var useCase = new GetMovieByIdUseCase(cache);
+        var response = await useCase.Execute(id);
 
         return Ok(response);
     }

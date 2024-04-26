@@ -1,34 +1,39 @@
-﻿using MayTheFourth.Communication.Responses;
+﻿using System.Text.Json;
+using MayTheFourth.Communication.Responses;
+using MayTheFourth.Enum;
 using MayTheFourth.Infrastructure;
+using MayTheFourth.Infrastructure.Caching;
+using Microsoft.EntityFrameworkCore;
 
 namespace MayTheFourth.Application.UseCases.Vehicles;
 
-public class GetAllVehiclesUseCase
+public class GetAllVehiclesUseCase(ICachingService cache) : VehicleUseCase
 {
     private readonly MayTheFourthDbContext _dbContext = new();
 
-    public ResponseAllVehiclesJson Execute()
+    public async Task<ResponseAllVehiclesJson> Execute()
     {
-        var vehicles = _dbContext.Vehicles;
+        var key = GetKeyCache(CacheKey.Vehicles);
+        var responseCache = await cache.GetAsync(key);
 
-        return new ResponseAllVehiclesJson
+        ResponseAllVehiclesJson? response;
+
+        if (string.IsNullOrWhiteSpace(responseCache) == false)
         {
-            Vehicles = vehicles.Select(vehicle =>
-            new ResponseVehicleJson {
-                Name = vehicle.Name,
-                Model = vehicle.Model,
-                Manufacturer = vehicle.Manufacturer,
-                CostInCredits = vehicle.CostInCredits,
-                Length = vehicle.Length,
-                MaxSpeed = vehicle.MaxSpeed,
-                Crew = vehicle.Crew,
-                Passengers = vehicle.Passengers,
-                CargoCapacity = vehicle.CargoCapacity,
-                Consumables = vehicle.Consumables,
-                Class = vehicle.Class,
-                Movies = vehicle.Movies.Select(movie => new ResponseMovieSimplifiedJson()
-                    { Id = movie.Id, Title = movie.Title }).ToList()
-            }).ToList()
+            response = JsonSerializer.Deserialize<ResponseAllVehiclesJson>(responseCache);
+
+            return response!;
+        }
+
+        var vehicles = _dbContext.Vehicles
+            .Include(s => s.Movies);
+
+        response = new ResponseAllVehiclesJson
+        {
+            Vehicles = vehicles.Select(vehicle => GetResponseVehicleJson(vehicle)).ToList()
         };
+
+        await cache.SetAsync(key, JsonSerializer.Serialize(response));
+        return response;
     }
 }
