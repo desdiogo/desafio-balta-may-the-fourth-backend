@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
@@ -22,7 +23,7 @@ namespace MayTheFourth.Infrastructure.Migrations
                     OpeningCrawl = table.Column<string>(type: "text", nullable: false),
                     Director = table.Column<string>(type: "varchar(50)", nullable: false),
                     Producer = table.Column<string>(type: "varchar(50)", nullable: false),
-                    ReleaseDate = table.Column<string>(type: "varchar(50)", nullable: false)
+                    ReleaseDate = table.Column<DateTime>(type: "date", nullable: false)
                 },
                 constraints: table =>
                 {
