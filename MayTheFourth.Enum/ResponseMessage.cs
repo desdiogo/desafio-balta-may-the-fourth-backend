@@ -8,6 +8,6 @@ public static class ResponseMessage
    public const string MovieDoesNotExist = $"An movie {DoesNotExist}";
    public const string PlanetDoesNotExist = $"An planet {DoesNotExist}";
    public const string StarshipDoesNotExist = $"An starship {DoesNotExist}";
-   public const string VehicleDoesNotExist = $"An character {DoesNotExist}";
+   public const string VehicleDoesNotExist = $"An vehicle {DoesNotExist}";
    public const string IsAlive = "Is alive";
 }
