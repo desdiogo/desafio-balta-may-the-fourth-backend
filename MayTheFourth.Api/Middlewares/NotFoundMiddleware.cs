@@ -6,6 +6,12 @@ namespace MayTheFourth.Api.Middlewares;
 
 public class NotFoundMiddleware(RequestDelegate next)
 {
+    private static JsonSerializerOptions Options { get; } = new()
+    {
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+        WriteIndented = true
+    };
+
     public async Task Invoke(HttpContext context)
     {
         await next(context);
@@ -15,12 +21,8 @@ public class NotFoundMiddleware(RequestDelegate next)
             context.Response.ContentType = ResponseContentType.ApplicationJson;
 
             var response = new ResponseErrorJson(ResponseMessage.NotFound);
-
-            var options = new JsonSerializerOptions
-            {
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
-            };
-            var jsonResponse = JsonSerializer.Serialize(response, options);
+            
+            var jsonResponse = JsonSerializer.Serialize(response, Options);
 
             await context.Response.WriteAsync(jsonResponse);
         }
