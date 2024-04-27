@@ -11,10 +11,10 @@ public class PlanetController(ICachingService cache) : ControllerBase
 {
     [HttpGet]
     [ProducesResponseType(typeof(ResponseAllPlanetsJson), StatusCodes.Status200OK)]
-    public async Task<IActionResult> ListAllPlanets()
+    public IActionResult ListAllPlanets()
     {
         var useCase = new GetAllPlanetsUseCase(cache);
-        var response = await useCase.Execute();
+        var response = useCase.Execute();
     
         return Ok(response);
     }
@@ -23,10 +23,10 @@ public class PlanetController(ICachingService cache) : ControllerBase
     [Route("{id}")]
     [ProducesResponseType(typeof(ResponsePlanetJson), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> ListPlanetById([FromRoute] ushort id)
+    public IActionResult ListPlanetById([FromRoute] ushort id)
     {
         var useCase = new GetPlanetByIdUseCase(cache);
-        var response = await useCase.Execute(id);
+        var response = useCase.Execute(id);
 
         return Ok(response);
     }

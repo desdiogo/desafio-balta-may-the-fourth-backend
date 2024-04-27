@@ -11,10 +11,11 @@ public class GetAllCharactersUseCase(ICachingService cache): CharacterUserCase
 {
     private readonly MayTheFourthDbContext _dbContext = new();
 
-    public async Task<ResponseAllCharactersJson> Execute()
+    public ResponseAllCharactersJson Execute()
     {
         var key = GetKeyCache(CacheKey.Characters);
-        var responseCache = await cache.GetAsync(key);
+        var responseTask = Task.Run(async () => await cache.GetAsync(key));
+        var responseCache = responseTask.Result;
         
         ResponseAllCharactersJson? response;
         
@@ -34,7 +35,8 @@ public class GetAllCharactersUseCase(ICachingService cache): CharacterUserCase
             Characters = characters.Select(character => GetResponseCharacterJson(character)).ToList()
         };
 
-        await cache.SetAsync(key, JsonSerializer.Serialize(response));
+        Task.Run(async () => await cache.SetAsync(key, JsonSerializer.Serialize(response)));
+        
         return response;
     }
 }

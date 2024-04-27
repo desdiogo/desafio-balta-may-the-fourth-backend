@@ -11,10 +11,10 @@ public class VehicleController(ICachingService cache) : ControllerBase
 {
     [HttpGet]
     [ProducesResponseType(typeof(ResponseAllVehiclesJson), StatusCodes.Status200OK)]
-    public async Task<IActionResult> ListAllVehicles()
+    public IActionResult ListAllVehicles()
     {
         var useCase = new GetAllVehiclesUseCase(cache);
-        var response = await useCase.Execute();
+        var response = useCase.Execute();
     
         return Ok(response);
     }
@@ -23,10 +23,10 @@ public class VehicleController(ICachingService cache) : ControllerBase
     [Route("{id}")]
     [ProducesResponseType(typeof(ResponseVehicleJson), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> ListVehicleById([FromRoute] ushort id)
+    public IActionResult ListVehicleById([FromRoute] ushort id)
     {
         var useCase = new GetVehicleByIdUseCase(cache);
-        var response = await useCase.Execute(id);
+        var response = useCase.Execute(id);
 
         return Ok(response);
     }

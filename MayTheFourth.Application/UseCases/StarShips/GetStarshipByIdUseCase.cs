@@ -8,14 +8,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MayTheFourth.Application.UseCases.Starships;
 
-public class GetStarshipByIdUseCase(ICachingService cache): StarshipUseCase
+public class GetStarshipByIdUseCase(ICachingService cache) : StarshipUseCase
 {
     private readonly MayTheFourthDbContext _dbContext = new();
 
-    public async Task<ResponseStarshipJson> Execute(ushort id)
+    public ResponseStarshipJson Execute(ushort id)
     {
         var key = GetKeyCache(CacheKey.Starship, (short)id);
-        var responseCache = await cache.GetAsync(key);
+        var responseTask = Task.Run(async () => await cache.GetAsync(key));
+        var responseCache = responseTask.Result;
 
         ResponseStarshipJson? response;
 
@@ -25,17 +26,18 @@ public class GetStarshipByIdUseCase(ICachingService cache): StarshipUseCase
 
             return response!;
         }
-        
-        var starship = await _dbContext.Starships
+
+        var starship = _dbContext.Starships
             .Include(s => s.Movies)
-            .FirstOrDefaultAsync(ev => ev.Id.Equals(id));
+            .FirstOrDefault(ev => ev.Id.Equals(id));
 
         if (starship is null)
             throw new NotFoundException(ResponseMessage.StarshipDoesNotExist);
-        
+
         response = GetResponseStarshipJson(starship);
 
-        await cache.SetAsync(key, JsonSerializer.Serialize(response));
+        Task.Run(async () => await cache.SetAsync(key, JsonSerializer.Serialize(response)));
+
         return response;
     }
 }

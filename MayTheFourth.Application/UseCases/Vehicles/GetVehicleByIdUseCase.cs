@@ -12,10 +12,11 @@ public class GetVehicleByIdUseCase(ICachingService cache) : VehicleUseCase
 {
     private readonly MayTheFourthDbContext _dbContext = new();
 
-    public async Task<ResponseVehicleJson> Execute(ushort id)
+    public ResponseVehicleJson Execute(ushort id)
     {
         var key = GetKeyCache(CacheKey.Vehicle, (short)id);
-        var responseCache = await cache.GetAsync(key);
+        var responseTask = Task.Run( async () => await cache.GetAsync(key));
+        var responseCache = responseTask.Result;
 
         ResponseVehicleJson? response;
 
@@ -26,16 +27,17 @@ public class GetVehicleByIdUseCase(ICachingService cache) : VehicleUseCase
             return response!;
         }
         
-        var vehicle = await _dbContext.Vehicles
+        var vehicle = _dbContext.Vehicles
             .Include(s => s.Movies)
-            .FirstOrDefaultAsync(s => s.Id.Equals(id));
+            .FirstOrDefault(s => s.Id.Equals(id));
 
         if (vehicle is null)
             throw new NotFoundException(ResponseMessage.VehicleDoesNotExist);
 
         response = GetResponseVehicleJson(vehicle);
         
-        await cache.SetAsync(key, JsonSerializer.Serialize(response));
+        Task.Run( async () =>  await cache.SetAsync(key, JsonSerializer.Serialize(response)));
+        
         return response;
     }
 }

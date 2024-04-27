@@ -11,11 +11,11 @@ public class MovieController(ICachingService cache) : ControllerBase
 {
     [HttpGet]
     [ProducesResponseType(typeof(ResponseAllMoviesJson), StatusCodes.Status200OK)]
-    public async Task<IActionResult> ListAllMovies()
+    public IActionResult ListAllMovies()
     {
 
         var useCase = new GetAllMoviesUseCase(cache);
-        var response = await useCase.Execute();
+        var response = useCase.Execute();
         
         return Ok(response);
     }
@@ -24,10 +24,10 @@ public class MovieController(ICachingService cache) : ControllerBase
     [Route("{id}")]
     [ProducesResponseType(typeof(ResponseMovieJson), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> ListMovieById([FromRoute] ushort id)
+    public IActionResult ListMovieById([FromRoute] ushort id)
     {
         var useCase = new GetMovieByIdUseCase(cache);
-        var response = await useCase.Execute(id);
+        var response = useCase.Execute(id);
 
         return Ok(response);
     }

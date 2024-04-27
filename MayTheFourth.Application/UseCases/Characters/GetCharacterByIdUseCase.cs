@@ -14,10 +14,11 @@ public class GetCharacterByIdUseCase(ICachingService cache) : CharacterUserCase
 {
     private readonly MayTheFourthDbContext _dbContext = new();
 
-    public async Task<ResponseCharacterJson> Execute(ushort id)
+    public ResponseCharacterJson Execute(ushort id)
     {
         var key = GetKeyCache(CacheKey.Character, (short)id);
-        var responseCache = await cache.GetAsync(key);
+        var responseTask = Task.Run(async () => await cache.GetAsync(key));
+        var responseCache = responseTask.Result;
 
         ResponseCharacterJson? response;
 
@@ -28,17 +29,18 @@ public class GetCharacterByIdUseCase(ICachingService cache) : CharacterUserCase
             return response!;
         }
 
-        var character = await _dbContext.Characters
+        var character = _dbContext.Characters
             .Include(s => s.Movies)
             .Include(character => character.Planet)
-            .FirstOrDefaultAsync(s => s.Id.Equals(id));
+            .FirstOrDefault(s => s.Id.Equals(id));
 
         if (character is null)
             throw new NotFoundException(ResponseMessage.CharacterDoesNotExist);
 
         response = GetResponseCharacterJson(character);
 
-        await cache.SetAsync(key, JsonSerializer.Serialize(response));
+        Task.Run(async () => await cache.SetAsync(key, JsonSerializer.Serialize(response)));
+
         return response;
     }
 }

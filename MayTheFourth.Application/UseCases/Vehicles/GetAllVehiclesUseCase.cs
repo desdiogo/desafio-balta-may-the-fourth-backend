@@ -11,10 +11,11 @@ public class GetAllVehiclesUseCase(ICachingService cache) : VehicleUseCase
 {
     private readonly MayTheFourthDbContext _dbContext = new();
 
-    public async Task<ResponseAllVehiclesJson> Execute()
+    public ResponseAllVehiclesJson Execute()
     {
         var key = GetKeyCache(CacheKey.Vehicles);
-        var responseCache = await cache.GetAsync(key);
+        var responseTask = Task.Run( async () => await cache.GetAsync(key));
+        var responseCache = responseTask.Result;
 
         ResponseAllVehiclesJson? response;
 
@@ -33,7 +34,8 @@ public class GetAllVehiclesUseCase(ICachingService cache) : VehicleUseCase
             Vehicles = vehicles.Select(vehicle => GetResponseVehicleJson(vehicle)).ToList()
         };
 
-        await cache.SetAsync(key, JsonSerializer.Serialize(response));
+        Task.Run( async () =>  await cache.SetAsync(key, JsonSerializer.Serialize(response)));
+        
         return response;
     }
 }

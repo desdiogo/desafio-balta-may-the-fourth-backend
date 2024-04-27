@@ -11,10 +11,10 @@ public class StarshipController(ICachingService cache) : ControllerBase
 {
     [HttpGet]
     [ProducesResponseType(typeof(ResponseAllStarshipJson), StatusCodes.Status200OK)]
-    public async Task<IActionResult> ListAllStarships()
+    public IActionResult ListAllStarships()
     {
         var useCase = new GetAllStarshipsUseCase(cache);
-        var response = await useCase.Execute();
+        var response = useCase.Execute();
 
         return Ok(response);
     }
@@ -23,10 +23,10 @@ public class StarshipController(ICachingService cache) : ControllerBase
     [Route("{id}")]
     [ProducesResponseType(typeof(ResponseStarshipJson), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> ListStarshipById([FromRoute] ushort id)
+    public IActionResult ListStarshipById([FromRoute] ushort id)
     {
         var useCase = new GetStarshipByIdUseCase(cache);
-        var response = await useCase.Execute(id);
+        var response = useCase.Execute(id);
 
         return Ok(response);
     }

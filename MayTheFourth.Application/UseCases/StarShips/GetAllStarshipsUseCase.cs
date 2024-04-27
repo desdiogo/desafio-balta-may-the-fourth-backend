@@ -11,10 +11,11 @@ public class GetAllStarshipsUseCase(ICachingService cache): StarshipUseCase
 {
     private readonly MayTheFourthDbContext _dbContext = new();
 
-    public async Task<ResponseAllStarshipJson> Execute()
+    public ResponseAllStarshipJson Execute()
     {
         var key = GetKeyCache(CacheKey.Starships);
-        var responseCache = await cache.GetAsync(key);
+        var responseTask = Task.Run(async () => await cache.GetAsync(key));
+        var responseCache = responseTask.Result;
         
         ResponseAllStarshipJson? response;
         
@@ -33,7 +34,8 @@ public class GetAllStarshipsUseCase(ICachingService cache): StarshipUseCase
             Starships = starships.Select(starship => GetResponseStarshipJson(starship)).ToList()
         };
 
-        await cache.SetAsync(key, JsonSerializer.Serialize(response));
+        Task.Run(async () => await cache.SetAsync(key, JsonSerializer.Serialize(response)));
+        
         return response;
     }
 }

@@ -7,17 +7,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MayTheFourth.Application.UseCases.Planets;
 
-public class GetAllPlanetsUseCase(ICachingService cache): PlanetUseCase
+public class GetAllPlanetsUseCase(ICachingService cache) : PlanetUseCase
 {
     private readonly MayTheFourthDbContext _dbContext = new();
 
-    public async Task<ResponseAllPlanetsJson> Execute()
+    public ResponseAllPlanetsJson Execute()
     {
         var key = GetKeyCache(CacheKey.Planets);
-        var responseCache = await cache.GetAsync(key);
-        
+        var responseTask = Task.Run(async () => await cache.GetAsync(key));
+        var responseCache = responseTask.Result;
+
         ResponseAllPlanetsJson? response;
-        
+
         if (string.IsNullOrWhiteSpace(responseCache) == false)
         {
             response = JsonSerializer.Deserialize<ResponseAllPlanetsJson>(responseCache);
@@ -28,14 +29,15 @@ public class GetAllPlanetsUseCase(ICachingService cache): PlanetUseCase
         var planets = _dbContext.Planets
             .Include(p => p.Characters)
             .Include(p => p.Movies);
-        
-        response =  new ResponseAllPlanetsJson
+
+        response = new ResponseAllPlanetsJson
         {
             Planets = planets.Select(planet => GetResponsePlanetJson(planet)).ToList()
         };
-        
-        
-        await cache.SetAsync(key, JsonSerializer.Serialize(response));
+
+
+        Task.Run(async () => await cache.SetAsync(key, JsonSerializer.Serialize(response)));
+
         return response;
     }
 }

@@ -11,10 +11,10 @@ public class CharacterController(ICachingService cache) : ControllerBase
 {
     [HttpGet]
     [ProducesResponseType(typeof(ResponseAllPlanetsJson), StatusCodes.Status200OK)]
-    public async Task<IActionResult> ListAllCharacters()
+    public IActionResult ListAllCharacters()
     {
         var useCase = new GetAllCharactersUseCase(cache);
-        var response = await useCase.Execute();
+        var response = useCase.Execute();
     
         return Ok(response);
     }
@@ -23,10 +23,10 @@ public class CharacterController(ICachingService cache) : ControllerBase
     [Route("{id}")]
     [ProducesResponseType(typeof(ResponseCharacterJson), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> ListCharaceterById([FromRoute] ushort id)
+    public IActionResult ListCharaceterById([FromRoute] ushort id)
     {
         var useCase = new GetCharacterByIdUseCase(cache);
-        var response = await useCase.Execute(id);
+        var response = useCase.Execute(id);
         
         return Ok(response);
     }

@@ -8,14 +8,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MayTheFourth.Application.UseCases.Movies;
 
-public class GetMovieByIdUseCase(ICachingService cache): MovieUseCase
+public class GetMovieByIdUseCase(ICachingService cache) : MovieUseCase
 {
     private readonly MayTheFourthDbContext _dbContext = new();
 
-    public async Task<ResponseMovieJson> Execute(ushort id)
+    public ResponseMovieJson Execute(ushort id)
     {
         var key = GetKeyCache(CacheKey.Movie, (short)id);
-        var responseCache = await cache.GetAsync(key);
+        var responseTask = Task.Run(async () => await cache.GetAsync(key));
+        var responseCache = responseTask.Result;
 
         ResponseMovieJson? response;
 
@@ -25,20 +26,21 @@ public class GetMovieByIdUseCase(ICachingService cache): MovieUseCase
 
             return response!;
         }
-        
-        var movie = await _dbContext.Movies
+
+        var movie = _dbContext.Movies
             .Include(m => m.Characters)
             .Include(m => m.Planets)
             .Include(m => m.Vehicles)
             .Include(m => m.Starships)
-            .FirstOrDefaultAsync(s => s.Id.Equals(id));
+            .FirstOrDefault(s => s.Id.Equals(id));
 
         if (movie is null)
             throw new NotFoundException(ResponseMessage.MovieDoesNotExist);
 
         response = GetResponseMovieJson(movie);
 
-        await cache.SetAsync(key, JsonSerializer.Serialize(response));
+        Task.Run(async () => await cache.SetAsync(key, JsonSerializer.Serialize(response)));
+
         return response;
     }
 }

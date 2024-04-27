@@ -7,24 +7,25 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MayTheFourth.Application.UseCases.Movies;
 
-public class GetAllMoviesUseCase(ICachingService cache): MovieUseCase
+public class GetAllMoviesUseCase(ICachingService cache) : MovieUseCase
 {
     private readonly MayTheFourthDbContext _dbContext = new();
 
-    public async Task<ResponseAllMoviesJson> Execute()
+    public ResponseAllMoviesJson Execute()
     {
         var key = GetKeyCache(CacheKey.Movies);
-        var responseCache = await cache.GetAsync(key);
-        
+        var responseTask = Task.Run(async () => await cache.GetAsync(key));
+        var responseCache = responseTask.Result;
+
         ResponseAllMoviesJson? response;
-        
+
         if (string.IsNullOrWhiteSpace(responseCache) == false)
         {
             response = JsonSerializer.Deserialize<ResponseAllMoviesJson>(responseCache);
 
             return response!;
         }
-        
+
         var movies = _dbContext.Movies
             .Include(m => m.Characters)
             .Include(m => m.Planets)
@@ -36,7 +37,8 @@ public class GetAllMoviesUseCase(ICachingService cache): MovieUseCase
             Movies = movies.Select(movie => GetResponseMovieJson(movie)).ToList()
         };
 
-        await cache.SetAsync(key, JsonSerializer.Serialize(response));
+        Task.Run(async () => await cache.SetAsync(key, JsonSerializer.Serialize(response)));
+
         return response;
     }
 }
