@@ -27,6 +27,7 @@ public class GetAllCharactersUseCase(ICachingService cache): CharacterUserCase
         }
         
         var characters = _dbContext.Characters
+            .AsNoTrackingWithIdentityResolution()
             .Include(s => s.Movies)
             .Include(character => character.Planet);
 

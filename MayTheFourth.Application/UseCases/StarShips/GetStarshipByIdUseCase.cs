@@ -28,6 +28,7 @@ public class GetStarshipByIdUseCase(ICachingService cache) : StarshipUseCase
         }
 
         var starship = _dbContext.Starships
+            .AsNoTrackingWithIdentityResolution()
             .Include(s => s.Movies)
             .FirstOrDefault(ev => ev.Id.Equals(id));
 

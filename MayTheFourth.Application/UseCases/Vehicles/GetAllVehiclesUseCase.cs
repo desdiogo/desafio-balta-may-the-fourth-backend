@@ -27,6 +27,7 @@ public class GetAllVehiclesUseCase(ICachingService cache) : VehicleUseCase
         }
 
         var vehicles = _dbContext.Vehicles
+            .AsNoTrackingWithIdentityResolution()
             .Include(s => s.Movies);
 
         response = new ResponseAllVehiclesJson

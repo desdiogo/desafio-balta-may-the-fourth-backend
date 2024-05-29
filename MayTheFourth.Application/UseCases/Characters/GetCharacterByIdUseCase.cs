@@ -30,6 +30,7 @@ public class GetCharacterByIdUseCase(ICachingService cache) : CharacterUserCase
         }
 
         var character = _dbContext.Characters
+            .AsNoTrackingWithIdentityResolution()
             .Include(s => s.Movies)
             .Include(character => character.Planet)
             .FirstOrDefault(s => s.Id.Equals(id));

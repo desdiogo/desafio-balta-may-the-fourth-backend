@@ -27,6 +27,7 @@ public class GetAllMoviesUseCase(ICachingService cache) : MovieUseCase
         }
 
         var movies = _dbContext.Movies
+            .AsNoTrackingWithIdentityResolution()
             .Include(m => m.Characters)
             .Include(m => m.Planets)
             .Include(m => m.Vehicles)

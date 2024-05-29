@@ -27,6 +27,7 @@ public class GetAllStarshipsUseCase(ICachingService cache): StarshipUseCase
         }
         
         var starships = _dbContext.Starships
+            .AsNoTrackingWithIdentityResolution()
             .Include(s => s.Movies);
 
         response = new ResponseAllStarshipJson

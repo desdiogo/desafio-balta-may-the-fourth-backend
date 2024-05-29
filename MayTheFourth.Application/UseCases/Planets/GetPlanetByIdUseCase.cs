@@ -28,6 +28,7 @@ public class GetPlanetByIdUseCase(ICachingService cache): PlanetUseCase
         }
         
         var planet = _dbContext.Planets
+            .AsNoTrackingWithIdentityResolution()
             .Include(p => p.Movies)
             .Include(p => p.Characters)
             .FirstOrDefault(s => s.Id.Equals(id));

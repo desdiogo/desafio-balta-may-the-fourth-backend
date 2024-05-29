@@ -28,6 +28,7 @@ public class GetVehicleByIdUseCase(ICachingService cache) : VehicleUseCase
         }
         
         var vehicle = _dbContext.Vehicles
+            .AsNoTrackingWithIdentityResolution()
             .Include(s => s.Movies)
             .FirstOrDefault(s => s.Id.Equals(id));
 
